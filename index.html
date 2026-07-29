@@ -89,8 +89,10 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdro
 .hero h1 em{font-style:normal;color:#8fc5f5}
 .hero p.sub{font-size:clamp(16px,2.6vw,19px);color:#dbe9f7;max-width:560px;margin-bottom:24px}
 .badges{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:28px}
-.badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:8px 14px;font-size:13.5px;font-weight:700;backdrop-filter:blur(4px)}
+.badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:9px 16px;font-size:14px;font-weight:700;backdrop-filter:blur(4px);color:#fff;transition:background .15s}
+a.badge:hover{background:rgba(255,255,255,.26);color:#fff}
 .badge .star{color:#ffce3d}
+.badge .arrow{opacity:.8;font-weight:800}
 .hero-ctas{display:flex;flex-wrap:wrap;gap:12px}
 .hero-note{margin-top:14px;font-size:13px;color:#b9d2e8}
 
@@ -110,6 +112,14 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdro
   .qgrid{grid-template-columns:1fr 1fr}
   .qgrid .span2{grid-column:span 2}
   .quote-card{padding:32px 34px}
+}
+.quote-flex{display:grid;gap:16px;grid-template-columns:1fr}
+.quote-photo{position:relative;border-radius:22px;overflow:hidden;box-shadow:var(--shadow);min-height:280px}
+.quote-photo img{width:100%;height:100%;object-fit:cover;object-position:center 30%;position:absolute;inset:0}
+.quote-photo figcaption{position:absolute;left:0;right:0;bottom:0;padding:40px 18px 14px;background:linear-gradient(180deg,transparent,rgba(9,28,47,.85));color:#fff;font-size:14px;font-weight:700}
+@media(min-width:900px){
+  .quote-flex{grid-template-columns:1.3fr .7fr;align-items:stretch}
+  .quote-photo{min-height:0}
 }
 
 /* Services */
@@ -299,9 +309,9 @@ footer a:hover{color:#fff}
       <h1>Tu mudanza en Rosario, <em>sin estrés y al mejor precio</em></h1>
       <p class="sub">Mudanzas, fletes y traslados en Rosario y alrededores. Equipo propio, camiones para cada tamaño y 20 años cuidando lo tuyo como si fuera nuestro.</p>
       <div class="badges">
-        <span class="badge"><span class="star">★</span> 4.7 en Google · 145 opiniones</span>
-        <span class="badge">20 años de experiencia</span>
-        <span class="badge">Cotización gratis en el día</span>
+        <a class="badge" href="https://www.google.com/maps/place/Fletes+Mudanzas+Rosario/@-32.908093,-60.6858341,17z/data=!4m8!3m7!1s0x95b6536591fc4619:0x755a717d0d95259d!8m2!3d-32.908093!4d-60.6858341!9m1!1b1!16s%2Fg%2F11byyk95l6" target="_blank" rel="noopener" aria-label="Ver nuestras 145 opiniones en Google">
+          <span class="star">★</span> 4.7 en Google · 145 opiniones <span class="arrow">→</span>
+        </a>
       </div>
       <div class="hero-ctas">
         <a class="btn btn-wa" href="https://wa.me/5493413889017?text=Hola%2C%20quiero%20cotizar%20una%20mudanza%20o%20flete%20en%20Rosario." target="_blank" rel="noopener">
@@ -310,12 +320,13 @@ footer a:hover{color:#fff}
         </a>
         <a class="btn btn-ghost" href="#cotizar">Programar mi mudanza</a>
       </div>
-      <p class="hero-note">Respondemos en el día · Rosario, Funes, Roldán, V.G. Gálvez y toda la zona</p>
+      <p class="hero-note">✓ 20 años de experiencia&nbsp;&nbsp;·&nbsp;&nbsp;✓ Cotización gratis en el día&nbsp;&nbsp;·&nbsp;&nbsp;✓ Rosario, Funes, Roldán, V.G. Gálvez y toda la zona</p>
     </div>
   </div>
 
   <!-- QUOTE FORM -->
   <div class="quote wrap" id="cotizar">
+    <div class="quote-flex">
     <div class="quote-card rv">
       <span class="kicker">Cotizá y programá</span>
       <h2>Tu presupuesto en 1 minuto</h2>
@@ -357,6 +368,11 @@ footer a:hover{color:#fff}
         </div>
         <p class="qsafe">🔒 Sin compromiso · No compartimos tus datos · También podés llamarnos al <a href="tel:+5493413889017">341 388-9017</a></p>
       </form>
+    </div>
+    <figure class="quote-photo rv">
+      <img src="./img/izamiento-vert-500.webp" srcset="./img/izamiento-vert-500.webp 500w, ./img/izamiento-vert-800.webp 800w" sizes="(min-width:900px) 380px, 100vw" alt="Izamiento de un mueble por el balcón en una mudanza en Rosario" loading="lazy" width="500" height="888">
+      <figcaption>¿No pasa por la escalera? Lo izamos por el balcón 💪</figcaption>
+    </figure>
     </div>
   </div>
 
@@ -525,9 +541,17 @@ footer a:hover{color:#fff}
     <div class="wrap">
       <span class="kicker">Zonas de trabajo</span>
       <h2>Rosario y toda la zona</h2>
-      <p class="lead">Trabajamos en todos los barrios de Rosario y las localidades vecinas. También hacemos mudanzas de larga distancia a todo el país.</p>
-      <div class="zones rv">
-        <span class="zone">Rosario Centro</span><span class="zone">Pichincha</span><span class="zone">Fisherton</span><span class="zone">Echesortu</span><span class="zone">Arroyito</span><span class="zone">Alberdi</span><span class="zone">Abasto</span><span class="zone">Zona Sur</span><span class="zone">Funes</span><span class="zone">Roldán</span><span class="zone">V. G. Gálvez</span><span class="zone">G. Baigorria</span><span class="zone">Capitán Bermúdez</span><span class="zone">San Lorenzo</span><span class="zone">Pérez</span><span class="zone">Soldini</span><span class="zone">Ibarlucea</span><span class="zone">Alvear</span><span class="zone">Pueblo Esther</span><span class="zone">Arroyo Seco</span>
+      <div class="contact-grid" style="align-items:center">
+        <div>
+          <p class="lead">Trabajamos en todos los barrios de Rosario y las localidades vecinas. También hacemos mudanzas de larga distancia a todo el país.</p>
+          <div class="zones rv">
+            <span class="zone">Rosario Centro</span><span class="zone">Pichincha</span><span class="zone">Fisherton</span><span class="zone">Echesortu</span><span class="zone">Arroyito</span><span class="zone">Alberdi</span><span class="zone">Abasto</span><span class="zone">Zona Sur</span><span class="zone">Funes</span><span class="zone">Roldán</span><span class="zone">V. G. Gálvez</span><span class="zone">G. Baigorria</span><span class="zone">Capitán Bermúdez</span><span class="zone">San Lorenzo</span><span class="zone">Pérez</span><span class="zone">Soldini</span><span class="zone">Ibarlucea</span><span class="zone">Alvear</span><span class="zone">Pueblo Esther</span><span class="zone">Arroyo Seco</span>
+          </div>
+        </div>
+        <div class="card fleet-card rv">
+          <img src="./img/vereda-700.webp" alt="Mudanza en plena carga en una vereda de Rosario" loading="lazy" width="700" height="525">
+          <div class="fbody"><h3>Todos los días en la calle</h3><p>Mudanzas reales, en barrios reales de Rosario.</p></div>
+        </div>
       </div>
     </div>
   </section>
