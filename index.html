@@ -688,10 +688,24 @@ document.getElementById('qform').addEventListener('submit', function(e){
   if (det) lineas.push('Detalle: ' + det);
   var url = 'https://wa.me/5493413889017?text=' + encodeURIComponent(lineas.join('\n'));
   // Evento GA4 equivalente al click saliente (alimenta lead_whatsapp en Google Ads)
+  // servicio = qué eligió en el desplegable, para poder separar mudanzas de fletes en los informes
   if (typeof gtag === 'function') {
-    gtag('event', 'click', { link_domain: 'wa.me', link_url: url, outbound: true, event_source: 'cotizador' });
+    gtag('event', 'click', { link_domain: 'wa.me', link_url: url, outbound: true, event_source: 'cotizador', servicio: tipo || 'sin especificar' });
   }
   window.open(url, '_blank', 'noopener');
+});
+
+// Clicks al teléfono: GA4 no mide los links tel: por su cuenta, así que los marcamos a mano.
+// Evento propio (no reusa link_domain wa.me) para no mezclarlo con los leads de WhatsApp.
+document.addEventListener('click', function(e){
+  var a = e.target.closest && e.target.closest('a[href^="tel:"]');
+  if (!a || typeof gtag !== 'function') return;
+  var zona = a.closest('.sticky-cta') ? 'barra_movil'
+           : a.closest('header') ? 'header'
+           : a.closest('#cotizar') ? 'cotizador'
+           : a.closest('#contacto') ? 'contacto'
+           : a.closest('footer') ? 'footer' : 'otro';
+  gtag('event', 'click_telefono', { event_source: zona, telefono: a.getAttribute('href').replace('tel:', '') });
 });
 
 // Animaciones de aparición (respetan reduced motion)
