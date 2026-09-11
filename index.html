@@ -26,13 +26,29 @@
 <link rel="preload" as="font" type="font/woff2" href="./fonts/manrope-latin.woff2" crossorigin>
 <link rel="preload" as="image" href="./img/hero-900.webp" imagesrcset="./img/hero-600.webp 600w, ./img/hero-750.webp 750w, ./img/hero-900.webp 900w, ./img/hero-1400.webp 1400w" imagesizes="100vw" fetchpriority="high">
 
-<!-- Google tag (gtag.js) — GA4: NO CAMBIAR, alimenta las conversiones de Google Ads -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-K1YYD5M4XR"></script>
+<!-- Google tag (gtag.js) — GA4: NO CAMBIAR EL ID NI EL CONFIG, alimenta las conversiones de Google Ads.
+     El script externo se inyecta después del load para no bloquear el primer render (LCP);
+     los eventos previos quedan encolados en dataLayer y se envían igual. -->
 <script>
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-K1YYD5M4XR');
+(function(){
+  var done=false;
+  function load(){
+    if(done) return; done=true;
+    var s=document.createElement('script');
+    s.async=true;
+    s.src='https://www.googletagmanager.com/gtag/js?id=G-K1YYD5M4XR';
+    document.head.appendChild(s);
+  }
+  if(document.readyState==='complete'){ setTimeout(load,0); }
+  else { window.addEventListener('load',function(){ setTimeout(load,0); }); }
+  ['pointerdown','keydown','touchstart'].forEach(function(ev){
+    window.addEventListener(ev,load,{once:true,passive:true});
+  });
+})();
 </script>
 
 <style>
