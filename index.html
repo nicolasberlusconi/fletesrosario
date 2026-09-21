@@ -34,6 +34,8 @@ window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-K1YYD5M4XR');
+// Google Ads (mismo gtag.js): conversión "lead_mudanza" disparada a mano abajo, solo para mudanzas.
+gtag('config', 'AW-881512631');
 (function(){
   var done=false;
   function load(){
@@ -708,7 +710,29 @@ document.getElementById('qform').addEventListener('submit', function(e){
   if (typeof gtag === 'function') {
     gtag('event', 'click', { link_domain: 'wa.me', link_url: url, outbound: true, event_source: 'cotizador', servicio: tipo || 'sin especificar' });
   }
+  // Conversión de Google Ads SOLO si es mudanza (o izamiento, que es parte del servicio de mudanza).
+  // Flete / Miniflete / Reparto NO cuentan: la pauta se optimiza únicamente hacia mudanzas.
+  if (tipo === 'Mudanza' || tipo.indexOf('Izamiento') === 0) leadMudanza('cotizador');
   window.open(url, '_blank', 'noopener');
+});
+
+// lead_mudanza: conversión de Google Ads (AW-881512631, acción 7785422628) + evento GA4 homónimo.
+// Se dispara desde el cotizador (solo Mudanza/Izamiento) y desde los botones directos de WhatsApp,
+// que no tienen servicio elegido y llegan casi siempre desde búsquedas de mudanzas.
+function leadMudanza(origen){
+  if (typeof gtag !== 'function') return;
+  gtag('event', 'conversion', { send_to: 'AW-881512631/D-NvCKS-sIAdELehq6QD' });
+  gtag('event', 'lead_mudanza', { event_source: origen });
+}
+document.addEventListener('click', function(e){
+  var a = e.target.closest && e.target.closest('a[href^="https://wa.me/"]');
+  if (!a) return;
+  var zona = a.classList.contains('fab') ? 'fab'
+           : a.closest('.sticky-cta') ? 'barra_movil'
+           : a.closest('header') ? 'header'
+           : a.closest('#contacto') ? 'contacto'
+           : a.closest('footer') ? 'footer' : 'otro';
+  leadMudanza('link_' + zona);
 });
 
 // Clicks al teléfono: GA4 no mide los links tel: por su cuenta, así que los marcamos a mano.
