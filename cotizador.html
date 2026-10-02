@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cotizador de Mudanzas en Rosario | Fletes & Mudanzas Rosario</title>
+<meta name="description" content="Cotizá tu mudanza en Rosario y zona en 2 minutos: contanos origen, destino, fecha e inventario y recibí tu presupuesto por WhatsApp. Gratis y sin compromiso.">
+<link rel="canonical" href="https://www.fletesrosario.ar/cotizador.html">
+<meta name="theme-color" content="#12314e">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_AR">
+<meta property="og:site_name" content="Fletes & Mudanzas Rosario">
+<meta property="og:title" content="Cotizador de Mudanzas en Rosario">
+<meta property="og:description" content="Contanos tu mudanza paso a paso y recibí el presupuesto por WhatsApp. 2 minutos, gratis y sin compromiso.">
+<meta property="og:url" content="https://www.fletesrosario.ar/cotizador.html">
+<meta property="og:image" content="https://www.fletesrosario.ar/img/og-image.jpg">
+<link rel="icon" href="./img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="./img/apple-touch-icon.png">
+<link rel="preload" as="font" type="font/woff2" href="./fonts/manrope-latin.woff2" crossorigin>
+
+<!-- Google tag (gtag.js) — GA4: NO CAMBIAR EL ID NI EL CONFIG, alimenta las conversiones de Google Ads.
+     Mismo patrón que index.html: el script externo se inyecta después del load. -->
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-K1YYD5M4XR');
+gtag('config', 'AW-881512631');
+(function(){
+  var done=false;
+  function load(){
+    if(done) return; done=true;
+    var s=document.createElement('script');
+    s.async=true;
+    s.src='https://www.googletagmanager.com/gtag/js?id=G-K1YYD5M4XR';
+    document.head.appendChild(s);
+  }
+  if(document.readyState==='complete'){ setTimeout(load,0); }
+  else { window.addEventListener('load',function(){ setTimeout(load,0); }); }
+  ['pointerdown','keydown','touchstart'].forEach(function(ev){
+    window.addEventListener(ev, load, {once:true, passive:true});
+  });
+})();
+</script>
+
+<style>
+@font-face{font-family:'Manrope';font-style:normal;font-weight:400 800;font-display:swap;src:url('./fonts/manrope-latin.woff2') format('woff2')}
+:root{
+  --navy:#12314e; --navy-2:#0c2439; --blue:#2268a9; --blue-l:#3d85c6; --sky:#eaf3fb;
+  --red:#e6394a; --wa:#0d8140; --wa-d:#0a6b35;
+  --ink:#1d2b3a; --mut:#5a6b7d; --line:#dde7f0; --bg:#f6f9fc; --card:#ffffff;
+  --r:18px; --shadow:0 10px 30px rgba(18,49,78,.10);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Manrope',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:var(--blue);text-decoration:none}
+.wrap{max-width:720px;margin:0 auto;padding:0 16px}
+
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:10px;height:58px}
+.brand{display:flex;align-items:center;gap:8px;font-weight:800;color:var(--navy);font-size:14px;line-height:1.1;white-space:nowrap}
+.brand img{width:32px;height:auto}
+.back{font-weight:700;font-size:13.5px;color:var(--mut);margin-left:auto}
+
+.head{padding:22px 0 6px}
+.head h1{font-size:clamp(22px,5vw,30px);letter-spacing:-.02em;color:var(--navy);line-height:1.15}
+.head p{color:var(--mut);font-size:14.5px;margin-top:4px}
+
+/* Progreso */
+.prog{display:flex;gap:5px;margin:16px 0 4px}
+.prog span{flex:1;height:5px;border-radius:99px;background:var(--line);transition:background .2s}
+.prog span.on{background:var(--blue)}
+.prog-label{font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);margin-top:8px}
+
+/* Card del wizard */
+.wiz{background:var(--card);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);padding:20px 16px 110px;margin:12px 0 40px;position:relative}
+@media(min-width:620px){.wiz{padding:28px 28px 110px}}
+.step{display:none}
+.step.on{display:block;animation:fade .25s ease}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.step h2{font-size:19px;color:var(--navy);letter-spacing:-.01em;margin-bottom:2px}
+.step .sub{font-size:13.5px;color:var(--mut);margin-bottom:16px}
+
+.field{margin-bottom:14px}
+.field label{display:block;font-size:12.5px;font-weight:800;color:var(--navy);margin-bottom:6px;letter-spacing:.02em}
+.field input[type=text],.field input[type=tel],.field input[type=date],.field select,.field textarea{width:100%;border:1.5px solid var(--line);border-radius:12px;padding:12px 13px;font:inherit;font-size:15px;color:var(--ink);background:#fbfdff}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--blue-l);background:#fff}
+.field textarea{resize:vertical;min-height:70px}
+.hint{font-size:12px;color:var(--mut);margin-top:4px}
+.req{color:var(--red)}
+
+/* Chips (selección única) */
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1.5px solid var(--line);background:#fbfdff;border-radius:999px;padding:9px 15px;font:inherit;font-size:14px;font-weight:700;color:var(--ink);cursor:pointer;transition:all .12s}
+.chip.on{background:var(--navy);border-color:var(--navy);color:#fff}
+
+/* Checkbox / opción múltiple */
+.opt{display:flex;gap:10px;align-items:flex-start;border:1.5px solid var(--line);background:#fbfdff;border-radius:13px;padding:12px 13px;margin-bottom:9px;cursor:pointer}
+.opt input{width:19px;height:19px;margin-top:1px;accent-color:var(--blue);flex:none}
+.opt b{font-size:14.5px;color:var(--navy);display:block;line-height:1.3}
+.opt small{font-size:12.5px;color:var(--mut)}
+.opt.sel{border-color:var(--blue-l);background:var(--sky)}
+
+/* Inventario */
+.tabs{display:flex;gap:7px;overflow-x:auto;padding-bottom:8px;margin-bottom:10px;-webkit-overflow-scrolling:touch}
+.tab{flex:none;border:1.5px solid var(--line);background:#fbfdff;border-radius:999px;padding:8px 14px;font:inherit;font-size:13.5px;font-weight:800;color:var(--mut);cursor:pointer;white-space:nowrap}
+.tab.on{background:var(--blue);border-color:var(--blue);color:#fff}
+.tab .n{display:inline-block;min-width:18px;text-align:center;background:rgba(255,255,255,.25);border-radius:99px;font-size:11.5px;margin-left:5px;padding:0 4px}
+.tab:not(.on) .n{background:var(--sky);color:var(--blue)}
+.items{display:none}
+.items.on{display:block}
+.item{display:flex;align-items:center;gap:10px;padding:10px 2px;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:0}
+.item .emoji{font-size:20px;flex:none;width:28px;text-align:center}
+.item .name{flex:1;font-size:14.5px;font-weight:700;color:var(--ink);line-height:1.25}
+.item .name small{display:block;font-weight:600;color:var(--mut);font-size:12px}
+.counter{display:flex;align-items:center;gap:0;flex:none}
+.counter button{width:36px;height:36px;border-radius:11px;border:1.5px solid var(--line);background:#fff;font-size:19px;font-weight:800;color:var(--blue);cursor:pointer;line-height:1}
+.counter button:active{background:var(--sky)}
+.counter .q{width:34px;text-align:center;font-weight:800;font-size:15.5px;color:var(--navy)}
+.item.has .name{color:var(--navy)}
+.inv-foot{display:flex;justify-content:space-between;align-items:center;margin-top:14px;padding-top:12px;border-top:1.5px solid var(--line);font-size:13.5px}
+.inv-foot b{color:var(--navy)}
+.addcustom{margin-top:14px;background:var(--sky);border-radius:13px;padding:13px}
+.addcustom .row{display:flex;gap:8px;margin-top:8px}
+.addcustom input{flex:1;border:1.5px solid #cfe0ef;border-radius:11px;padding:10px 12px;font:inherit;font-size:14px;background:#fff}
+.addcustom button{border:0;background:var(--blue);color:#fff;font-weight:800;border-radius:11px;padding:0 16px;cursor:pointer;font:inherit;font-size:14px}
+.customlist{margin-top:8px;font-size:13.5px}
+.customlist span{display:inline-flex;align-items:center;gap:6px;background:#fff;border:1px solid var(--line);border-radius:99px;padding:4px 10px;margin:3px 4px 0 0}
+.customlist button{border:0;background:none;color:var(--red);font-weight:800;cursor:pointer;font-size:15px;line-height:1}
+
+/* Resumen */
+.sum{font-size:14px}
+.sum section{border:1px solid var(--line);border-radius:13px;padding:12px 14px;margin-bottom:10px;background:#fbfdff}
+.sum h3{font-size:13px;color:var(--blue);text-transform:uppercase;letter-spacing:.06em;display:flex;justify-content:space-between;align-items:center}
+.sum h3 a{font-size:12px;font-weight:800;text-transform:none;letter-spacing:0;cursor:pointer}
+.sum p,.sum li{color:var(--ink);margin-top:4px}
+.sum ul{margin:4px 0 0 18px}
+
+/* Nav inferior del wizard */
+.wiznav{position:absolute;left:0;right:0;bottom:0;display:flex;gap:10px;padding:14px 16px calc(14px + env(safe-area-inset-bottom));background:#fff;border-top:1px solid var(--line);border-radius:0 0 20px 20px}
+@media(min-width:620px){.wiznav{padding:16px 28px}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:800;font-size:15.5px;border-radius:13px;padding:14px 20px;border:0;cursor:pointer;font-family:inherit;transition:transform .12s}
+.btn:active{transform:scale(.98)}
+.btn-back{background:var(--sky);color:var(--navy);flex:0 0 auto}
+.btn-next{background:var(--blue);color:#fff;flex:1;box-shadow:0 6px 18px rgba(34,104,169,.3)}
+.btn-wa{background:var(--wa);color:#fff;flex:1;box-shadow:0 6px 18px rgba(13,129,64,.35)}
+.btn-wa:hover{background:var(--wa-d)}
+.btn[disabled]{opacity:.45;cursor:not-allowed}
+.err{display:none;background:#fdeef0;border:1px solid #f5c2c9;color:#a4202f;border-radius:11px;padding:10px 13px;font-size:13.5px;font-weight:700;margin-bottom:12px}
+.err.on{display:block}
+.bad input,.bad select,.bad .chips{outline:2px solid var(--red);outline-offset:1px;border-radius:12px}
+.bad>label{color:var(--red)}
+input.bad,label.bad{outline:2px solid var(--red);outline-offset:1px;border-radius:12px}
+.datebox{display:flex;align-items:center;gap:12px;border:1.5px solid var(--line);border-radius:13px;background:#fbfdff;padding:4px 6px 4px 14px;cursor:pointer}
+.datebox:active{border-color:var(--blue-l)}
+.datebox .cal{font-size:22px;flex:none}
+.datebox input{flex:1;border:0;background:transparent;font:inherit;font-size:16px;font-weight:700;color:var(--navy);padding:13px 6px;min-width:0}
+.datebox input:focus{outline:none}
+.ico{width:19px;height:19px;flex:none}
+.trust{text-align:center;font-size:12.5px;color:var(--mut);margin:-26px 0 40px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="./">
+      <img src="./img/logo-80.webp" alt="Fletes & Mudanzas Rosario" width="32" height="40">
+      <span>Fletes &amp; Mudanzas<br>ROSARIO</span>
+    </a>
+    <a class="back" href="./">← Volver al inicio</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="head">
+    <h1>Cotizá tu mudanza</h1>
+    <p>Contanos los detalles en 6 pasos y te mandamos el presupuesto por WhatsApp. Gratis y sin compromiso.</p>
+    <div class="prog" id="prog" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+    <div class="prog-label" id="progLabel">Paso 1 de 6 · Origen</div>
+  </div>
+
+  <div class="wiz">
+    <div class="err" id="err"></div>
+
+    <!-- PASO 1: ORIGEN -->
+    <div class="step" data-step="0">
+      <h2>¿De dónde salís? 📍</h2>
+      <p class="sub">El lugar donde está hoy tu mudanza.</p>
+      <div id="formO"></div>
+    </div>
+
+    <!-- PASO 2: DESTINO -->
+    <div class="step" data-step="1">
+      <h2>¿A dónde vas? 🏠</h2>
+      <p class="sub">El lugar al que hay que llevar todo.</p>
+      <div id="formD"></div>
+    </div>
+
+    <!-- PASO 3: FECHA -->
+    <div class="step" data-step="2">
+      <h2>¿Cuándo te mudás? 📅</h2>
+      <p class="sub">Si todavía no tenés fecha exacta, poné una estimada y marcá "flexible".</p>
+      <div class="field">
+        <label for="f-fecha">Fecha deseada</label>
+        <div class="datebox" id="datebox">
+          <span class="cal">📅</span>
+          <input type="date" id="f-fecha">
+        </div>
+        <div class="hint">Tocá el calendario para elegir el día.</div>
+      </div>
+      <div class="field">
+        <label>Franja horaria preferida</label>
+        <div class="chips" id="f-franja">
+          <button type="button" class="chip" data-v="Mañana (8 a 12)">Mañana (8-12)</button>
+          <button type="button" class="chip" data-v="Tarde (13 a 18)">Tarde (13-18)</button>
+          <button type="button" class="chip on" data-v="Indistinto">Me da igual</button>
+        </div>
+      </div>
+      <label class="opt" id="f-flex-wrap">
+        <input type="checkbox" id="f-flex">
+        <span><b>Tengo fecha flexible 💰 mejor precio</b><small>Si podés moverla unos días, coordinamos el día que más convenga y el presupuesto baja</small></span>
+      </label>
+    </div>
+
+    <!-- PASO 4: INVENTARIO -->
+    <div class="step" data-step="3">
+      <h2>¿Qué hay que llevar? 📦</h2>
+      <p class="sub">Marcá la cantidad de cada cosa. No hace falta que sea exacto — es para dimensionar el camión y el equipo.</p>
+      <div class="tabs" id="tabs"></div>
+      <div id="inv"></div>
+      <div class="addcustom">
+        <b style="font-size:13.5px;color:var(--navy)">¿Algo que no está en la lista?</b>
+        <div class="row">
+          <input type="text" id="cust-n" placeholder="¿Qué es? Ej: acuario, torno, estatua…">
+        </div>
+        <div class="row">
+          <input type="text" id="cust-d" placeholder="Tamaño y peso aprox. Ej: 1,5 m de alto · ~40 kg">
+          <button type="button" id="cust-add">Agregar</button>
+        </div>
+        <div class="hint" style="margin-top:6px">Con una idea del tamaño y el peso lo cotizamos bien de entrada.</div>
+        <div class="customlist" id="custlist"></div>
+      </div>
+      <div class="inv-foot">
+        <span>Objetos cargados: <b id="inv-count">0</b></span>
+        <span>Volumen estimado: <b id="inv-m3">0 m³</b></span>
+      </div>
+    </div>
+
+    <!-- PASO 5: CONDICIONES Y SERVICIOS -->
+    <div class="step" data-step="4">
+      <h2>Condiciones y servicios 🛠️</h2>
+      <p class="sub">Esto nos ayuda a cotizar bien de entrada, sin sorpresas el día de la mudanza.</p>
+      <div class="field"><label>¿Quién hace la carga y descarga? <span class="req">*</span></label></div>
+      <div id="modo"></div>
+      <div class="field" style="margin-top:18px"><label>¿Alguna de estas condiciones aplica?</label></div>
+      <div id="conds"></div>
+      <div class="field" style="margin-top:18px" id="servs-label"><label>¿Qué servicios necesitás además del traslado?</label></div>
+      <div id="servs"></div>
+      <p class="hint" id="servs-nota" style="display:none">Elegiste <b>solo camión</b>: el desarme y las instalaciones los hace tu gente. Si querés que nos ocupemos nosotros, elegí "Mudanza completa".</p>
+      <div class="field" style="margin-top:18px">
+        <label for="f-obs">Comentarios (opcional)</label>
+        <textarea id="f-obs" placeholder="Ej: el consorcio solo permite mudanzas de 9 a 17, la calle es cortada, el placard ya está desarmado…"></textarea>
+      </div>
+    </div>
+
+    <!-- PASO 6: RESUMEN Y ENVÍO -->
+    <div class="step" data-step="5">
+      <h2>Revisá y enviá ✅</h2>
+      <p class="sub">Esto es lo que nos llega por WhatsApp. Si algo está mal, tocá "editar".</p>
+      <div class="sum" id="resumen"></div>
+      <div class="field" style="margin-top:16px">
+        <label for="f-nombre">Tu nombre <span class="req">*</span></label>
+        <input type="text" id="f-nombre" autocomplete="name" placeholder="Nombre y apellido">
+      </div>
+      <div class="field">
+        <label for="f-tel">Un teléfono de contacto (opcional)</label>
+        <input type="tel" id="f-tel" autocomplete="tel" placeholder="Por si escribís desde otro WhatsApp">
+      </div>
+      <label class="opt" id="f-ok-wrap">
+        <input type="checkbox" id="f-ok">
+        <span><b>Los datos del resumen son correctos</b><small>El presupuesto final se arma con esta información</small></span>
+      </label>
+    </div>
+
+    <!-- NAV -->
+    <div class="wiznav">
+      <button type="button" class="btn btn-back" id="btnBack" style="display:none">Atrás</button>
+      <button type="button" class="btn btn-next" id="btnNext">Siguiente</button>
+      <button type="button" class="btn btn-wa" id="btnSend" style="display:none">
+        <svg class="ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.4-3c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.2-.3.3-.5v-.5L9.6 7.2c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.9.9-1.2 2.1-.6 3.4a11.6 11.6 0 0 0 4.5 4.7c1.6.9 2.7 1.1 3.6 1 .6-.1 1.5-.5 1.8-1.1.2-.5.2-1 .1-1.1-.1-.2-.3-.2-.6-.3z"/></svg>
+        Enviar por WhatsApp
+      </button>
+    </div>
+  </div>
+  <p class="trust">🔒 No compartimos tus datos · Respondemos en el día · ★ 4.7 en Google</p>
+</main>
+
+<script>
+/* ========== DATOS ========== */
+var WA = '5493413889017';
+
+var ZONAS = ['Rosario Centro','Rosario Norte','Rosario Sur','Rosario Oeste','Pichincha','Fisherton','Echesortu','Arroyito','Alberdi','Abasto','Otra zona de Rosario','Funes','Roldán','Villa G. Gálvez','Granadero Baigorria','Capitán Bermúdez','San Lorenzo','Pérez','Soldini','Ibarlucea','Alvear','Pueblo Esther','Arroyo Seco','Otra localidad / larga distancia'];
+var TIPOS = ['Departamento','Casa','PH','Oficina o comercio','Depósito'];
+var DIST = ['En la puerta','A menos de 10 m','Entre 10 y 50 m','A más de 50 m','No sé'];
+
+/* Catálogo: [clave, nombre, emoji, m3] — variantes aplanadas en filas simples */
+var CAT = {
+  'Living y comedor': [
+    ['sil2','Sillón de 2 cuerpos','🛋️',0.9], ['sil3','Sillón de 3 cuerpos o esquinero','🛋️',1.3],
+    ['mesar','Mesa ratona','🪵',0.3], ['mesac','Mesa de comedor','🍽️',0.8], ['silla','Sillas','🪑',0.1],
+    ['tvc','Televisor hasta 43"','📺',0.15], ['tvg','Televisor más de 43"','📺',0.3],
+    ['bibl','Mueble, modular o biblioteca','🗄️',0.9], ['escr','Escritorio','🖥️',0.6], ['alf','Alfombra enrollada','🧵',0.1]
+  ],
+  'Dormitorios': [
+    ['cama1','Cama de 1 plaza','🛏️',0.6], ['cama2','Cama de 2 plazas','🛏️',1.0], ['camak','Cama king o sommier grande','🛏️',1.4],
+    ['colch','Colchón suelto','🧺',0.5], ['comoda','Cómoda o chifonier','🗃️',0.5],
+    ['pla2','Placard de 2 puertas','🚪',1.0], ['pla3','Placard de 3+ puertas','🚪',1.5],
+    ['mluz','Mesa de luz','🕯️',0.15], ['cuna','Cuna o cama infantil','👶',0.5]
+  ],
+  'Cocina y lavadero': [
+    ['helc','Heladera chica o bajo mesada','🧊',0.6], ['helg','Heladera grande o side by side','🧊',1.0],
+    ['freez','Freezer','❄️',0.8], ['lavarr','Lavarropas','🫧',0.5], ['secarr','Secarropas','🌀',0.4],
+    ['cocina','Cocina u horno','🍳',0.5], ['micro','Microondas','📟',0.1], ['alac','Alacena o mueble de cocina','🗄️',0.5]
+  ],
+  'Patio y exterior': [
+    ['parri','Parrilla','🔥',0.6], ['bici','Bicicleta','🚲',0.3], ['moto','Moto','🏍️',0.8],
+    ['mjard','Mesa o juego de jardín','🌳',0.5], ['macet','Macetas grandes','🪴',0.2],
+    ['herr','Herramientas o banco de trabajo','🧰',0.4], ['repos','Sombrilla y reposeras','⛱️',0.3]
+  ],
+  'Objetos especiales': [
+    ['piano','Piano','🎹',1.8], ['cajaf','Caja fuerte','🔐',0.5], ['aire','Aire acondicionado split','🌬️',0.3],
+    ['termo','Termotanque o calefón','🚿',0.3], ['espejo','Espejo o mampara grande','🪞',0.2], ['pool','Mesa de pool o metegol','🎱',1.5]
+  ],
+  'Cajas y bolsas': [
+    ['cajach','Cajas chicas','📦',0.05], ['cajam','Cajas medianas','📦',0.1], ['cajag','Cajas grandes','📦',0.15], ['bolsa','Bolsas y valijas','🧳',0.07]
+  ]
+};
+
+var CONDS = [
+  ['iza','Hay muebles que no pasan por escalera ni ascensor','Posible izamiento por balcón — lo hacemos nosotros'],
+  ['pesado','Objetos muy pesados (más de 80 kg)','Piano, caja fuerte, máquinas…'],
+  ['fragil','Objetos frágiles o de mucho valor','Cristalería, obras, instrumentos…'],
+  ['escalera','Escalera angosta o caracol',''],
+  ['calle','Calle angosta, cortada o de difícil acceso para el camión',''],
+  ['consorcio','El edificio tiene horarios o reglas para mudanzas','Consorcio, seguro del edificio…']
+];
+var MODOS = [
+  ['equipo','Mudanza completa con nuestro equipo','Nosotros cargamos, trasladamos y descargamos todo. Precio cerrado.','🚛💪','Recomendado'],
+  ['camion','Solo camión y chofer','Ustedes cargan y descargan; nosotros trasladamos.','🚛','']
+];
+/* Servicios con mano de obra: solo aplican en modalidad "equipo" (mano=1) */
+var SERVS = [
+  ['desarme','Desarme y armado de muebles','Placares, camas, modulares',1],
+  ['instal','Desinstalar / instalar lavarropas o aire','Lo desconectamos y lo dejamos funcionando',1]
+];
+
+/* ========== ESTADO ========== */
+var S = {
+  step: 0,
+  o: {zona:'', dir:'', tipo:'', piso:'', asc:'', entran:'', dist:''},
+  d: {zona:'', dir:'', tipo:'', piso:'', asc:'', entran:'', dist:''},
+  fecha:'', franja:'Indistinto', flex:false,
+  inv:{}, custom:[],
+  modo:'equipo', conds:{}, servs:{}, obs:'',
+  nombre:'', tel:''
+};
+try { var saved = localStorage.getItem('cotizador_v1'); if (saved) { var p = JSON.parse(saved); if (p && p.o) S = Object.assign(S, p, {step: Math.min(p.step||0, 5)}); } } catch(e){}
+function save(){ try { localStorage.setItem('cotizador_v1', JSON.stringify(S)); } catch(e){} }
+
+/* ========== HELPERS ========== */
+function $(id){ return document.getElementById(id); }
+function esc(s){ var d=document.createElement('div'); d.textContent=s; return d.innerHTML; }
+var ITEMS = {}; Object.keys(CAT).forEach(function(amb){ CAT[amb].forEach(function(it){ ITEMS[it[0]] = {n:it[1], e:it[2], v:it[3], amb:amb}; }); });
+
+/* ========== FORMULARIO ORIGEN/DESTINO ========== */
+function dirForm(which){
+  var a = S[which], pfx = which;
+  var zonaOpts = '<option value="">Elegí el barrio o la localidad…</option>' + ZONAS.map(function(z){ return '<option'+(a.zona===z?' selected':'')+'>'+z+'</option>'; }).join('');
+  var tipoChips = TIPOS.map(function(t){ return '<button type="button" class="chip'+(a.tipo===t?' on':'')+'" data-k="tipo" data-v="'+t+'">'+t+'</button>'; }).join('');
+  var deptoish = (a.tipo==='Departamento'||a.tipo==='PH'||a.tipo==='Oficina o comercio');
+  var ascChips = ['Sí','No','No sé'].map(function(v){ return '<button type="button" class="chip'+(a.asc===v?' on':'')+'" data-k="asc" data-v="'+v+'">'+v+'</button>'; }).join('');
+  var entChips = ['Sí','Algunos no','No sé'].map(function(v){ return '<button type="button" class="chip'+(a.entran===v?' on':'')+'" data-k="entran" data-v="'+v+'">'+v+'</button>'; }).join('');
+  var distChips = DIST.map(function(v){ return '<button type="button" class="chip'+(a.dist===v?' on':'')+'" data-k="dist" data-v="'+v+'">'+v+'</button>'; }).join('');
+  return ''
+  + '<div class="field" data-f="zona"><label>Barrio o localidad <span class="req">*</span></label><select data-k="zona">'+zonaOpts+'</select></div>'
+  + '<div class="field"><label>Dirección (calle y altura — opcional)</label><input type="text" data-k="dir" value="'+esc(a.dir)+'" placeholder="Ej: Córdoba 1300"><div class="hint">Si preferís, la pasás después por WhatsApp.</div></div>'
+  + '<div class="field" data-f="tipo"><label>Tipo de lugar <span class="req">*</span></label><div class="chips">'+tipoChips+'</div></div>'
+  + (deptoish ? '<div class="field" data-f="piso"><label>Piso'+(a.tipo==='Departamento'?' <span class="req">*</span>':'')+'</label><input type="text" data-k="piso" value="'+esc(a.piso)+'" placeholder="Ej: PB, 3, 11…" style="max-width:140px"></div>'
+  + '<div class="field"><label>¿Hay ascensor?</label><div class="chips">'+ascChips+'</div></div>'
+  + (a.asc==='Sí' ? '<div class="field"><label>¿Entran los muebles grandes en el ascensor?</label><div class="chips">'+entChips+'</div></div>' : '') : '')
+  + '<div class="field" data-f="dist"><label>¿A qué distancia de la entrada puede parar el camión? <span class="req">*</span></label><div class="chips">'+distChips+'</div></div>';
+}
+function bindDirForm(which){
+  var cont = $(which==='o'?'formO':'formD');
+  cont.innerHTML = dirForm(which);
+  cont.querySelectorAll('[data-k]').forEach(function(el){
+    var k = el.getAttribute('data-k');
+    if (el.tagName==='SELECT' || el.tagName==='INPUT') {
+      el.addEventListener(el.tagName==='SELECT'?'change':'input', function(){ S[which][k] = el.value; save(); });
+    } else {
+      el.addEventListener('click', function(){
+        S[which][k] = el.getAttribute('data-v'); save();
+        bindDirForm(which); // re-render para chips y campos condicionales
+      });
+    }
+  });
+}
+
+/* ========== INVENTARIO ========== */
+var curTab = Object.keys(CAT)[0];
+function renderTabs(){
+  $('tabs').innerHTML = Object.keys(CAT).map(function(amb){
+    var count = CAT[amb].reduce(function(acc,it){ return acc + (S.inv[it[0]]||0); }, 0);
+    return '<button type="button" class="tab'+(amb===curTab?' on':'')+'" data-amb="'+amb+'">'+amb+(count?'<span class="n">'+count+'</span>':'')+'</button>';
+  }).join('');
+  $('tabs').querySelectorAll('.tab').forEach(function(t){
+    t.addEventListener('click', function(){ curTab = t.getAttribute('data-amb'); renderTabs(); renderItems(); });
+  });
+}
+function renderItems(){
+  $('inv').innerHTML = Object.keys(CAT).map(function(amb){
+    return '<div class="items'+(amb===curTab?' on':'')+'" data-amb="'+amb+'">' + CAT[amb].map(function(it){
+      var q = S.inv[it[0]]||0;
+      return '<div class="item'+(q?' has':'')+'"><span class="emoji">'+it[2]+'</span><span class="name">'+it[1]+'</span>'
+        + '<span class="counter"><button type="button" data-id="'+it[0]+'" data-d="-1" aria-label="Quitar">−</button><span class="q">'+q+'</span><button type="button" data-id="'+it[0]+'" data-d="1" aria-label="Agregar">+</button></span></div>';
+    }).join('') + '</div>';
+  }).join('');
+  $('inv').querySelectorAll('.counter button').forEach(function(b){
+    b.addEventListener('click', function(){
+      var id=b.getAttribute('data-id'), d=parseInt(b.getAttribute('data-d'),10);
+      S.inv[id] = Math.max(0, (S.inv[id]||0) + d);
+      if (!S.inv[id]) delete S.inv[id];
+      save(); renderTabs(); renderItems(); invFoot();
+    });
+  });
+  invFoot();
+}
+function invTotals(){
+  var n=0, m3=0;
+  Object.keys(S.inv).forEach(function(id){ n += S.inv[id]; m3 += S.inv[id]*(ITEMS[id]?ITEMS[id].v:0.3); });
+  m3 += S.custom.length * 0.4; n += S.custom.length;
+  return {n:n, m3:Math.round(m3*10)/10};
+}
+function invFoot(){ var t=invTotals(); $('inv-count').textContent=t.n; $('inv-m3').textContent='~'+t.m3+' m³'; }
+function renderCustom(){
+  $('custlist').innerHTML = S.custom.map(function(c,i){ return '<span>'+esc(c)+'<button type="button" data-i="'+i+'" aria-label="Quitar">×</button></span>'; }).join('');
+  $('custlist').querySelectorAll('button').forEach(function(b){
+    b.addEventListener('click', function(){ S.custom.splice(parseInt(b.getAttribute('data-i'),10),1); save(); renderCustom(); invFoot(); });
+  });
+}
+
+/* ========== MODALIDAD, CONDICIONES Y SERVICIOS ========== */
+function renderModo(){
+  $('modo').innerHTML = MODOS.map(function(m){
+    var on = S.modo===m[0];
+    return '<label class="opt'+(on?' sel':'')+'" style="align-items:center"><input type="radio" name="modo" data-id="'+m[0]+'"'+(on?' checked':'')+'>'
+      + '<span><b>'+m[3]+' '+m[1]+(m[4]?' <span style="background:var(--sky);color:var(--blue);border-radius:99px;font-size:10.5px;padding:2px 8px;vertical-align:middle">'+m[4]+'</span>':'')+'</b><small>'+m[2]+'</small></span></label>';
+  }).join('');
+  $('modo').querySelectorAll('input').forEach(function(r){
+    r.addEventListener('change', function(){
+      S.modo = r.getAttribute('data-id');
+      // en "solo camión" no aplican los servicios con mano de obra: los destildamos
+      if (S.modo==='camion') SERVS.forEach(function(s){ if (s[3]) delete S.servs[s[0]]; });
+      save(); renderModo(); renderServs();
+    });
+  });
+}
+function renderServs(){
+  var list = SERVS.filter(function(s){ return S.modo==='equipo' || !s[3]; });
+  renderOpts('servs', list, 'servs');
+  var camion = S.modo==='camion';
+  $('servs-nota').style.display = camion && !list.length ? '' : 'none';
+  $('servs-label').style.display = list.length ? '' : 'none';
+}
+function renderOpts(contId, list, bag){
+  $(contId).innerHTML = list.map(function(c){
+    var on = !!S[bag][c[0]];
+    return '<label class="opt'+(on?' sel':'')+'"><input type="checkbox" data-id="'+c[0]+'"'+(on?' checked':'')+'><span><b>'+c[1]+'</b>'+(c[2]?'<small>'+c[2]+'</small>':'')+'</span></label>';
+  }).join('');
+  $(contId).querySelectorAll('input').forEach(function(ch){
+    ch.addEventListener('change', function(){
+      var id=ch.getAttribute('data-id');
+      if (ch.checked) S[bag][id]=true; else delete S[bag][id];
+      save(); renderOpts(contId, list, bag);
+    });
+  });
+}
+
+/* ========== MENSAJE DE WHATSAPP ========== */
+function fmtFecha(f){ if(!f) return ''; var p=f.split('-'); return p[2]+'/'+p[1]+'/'+p[0]; }
+function lugarLinea(a){
+  var parts=[];
+  if (a.tipo) {
+    var t=a.tipo;
+    if (a.piso) t += ' · piso '+a.piso;
+    if (a.tipo==='Departamento'||a.tipo==='PH'||a.tipo==='Oficina o comercio'){
+      if (a.asc==='Sí') t += ' · con ascensor' + (a.entran==='Algunos no' ? ' (muebles grandes NO entran)' : a.entran==='No sé' ? ' (no sabe si entran los muebles)' : '');
+      if (a.asc==='No') t += ' · SIN ascensor';
+      if (a.asc==='No sé') t += ' · no sabe si hay ascensor';
+    }
+    parts.push(t);
+  }
+  parts.push(a.zona + (a.dir ? ' — '+a.dir : ''));
+  if (a.dist) parts.push('camión: '+a.dist.toLowerCase());
+  return parts.join('\n   ');
+}
+function buildMsg(){
+  var t = invTotals();
+  var L = [];
+  L.push('🚛 *COTIZACIÓN DE MUDANZA* (web)');
+  L.push('');
+  L.push('👤 ' + (S.nombre||'-') + (S.tel ? ' · tel: '+S.tel : ''));
+  L.push('');
+  L.push('📍 *ORIGEN:*');
+  L.push('   ' + lugarLinea(S.o));
+  L.push('📍 *DESTINO:*');
+  L.push('   ' + lugarLinea(S.d));
+  L.push('');
+  L.push('📅 *Fecha:* ' + (S.fecha ? fmtFecha(S.fecha) : 'a definir') + ' · ' + S.franja + (S.flex ? ' · fecha flexible' : ''));
+  L.push('');
+  L.push('👷 *Modalidad:* ' + (S.modo==='camion' ? 'SOLO CAMIÓN Y CHOFER (cargan y descargan ellos)' : 'MUDANZA COMPLETA (nuestro equipo carga y descarga)'));
+  L.push('');
+  L.push('📦 *INVENTARIO* (' + t.n + ' objetos · ~' + t.m3 + ' m³ aprox):');
+  var byAmb = {};
+  Object.keys(S.inv).forEach(function(id){
+    var it = ITEMS[id]; if (!it) return;
+    (byAmb[it.amb] = byAmb[it.amb] || []).push('• ' + S.inv[id] + ' × ' + it.n.toLowerCase());
+  });
+  Object.keys(byAmb).forEach(function(amb){ L.push('_' + amb + ':_'); byAmb[amb].forEach(function(l){ L.push(l); }); });
+  if (S.custom.length) { L.push('_Otros:_'); S.custom.forEach(function(c){ L.push('• ' + c); }); }
+  if (!t.n) L.push('• (sin inventario cargado — lo detalla por WhatsApp)');
+  var cs = CONDS.filter(function(c){ return S.conds[c[0]]; }).map(function(c){ return c[1]; });
+  if (cs.length) { L.push(''); L.push('⚠️ *CONDICIONES:*'); cs.forEach(function(c){ L.push('• ' + c); }); }
+  var sv = SERVS.filter(function(s){ return S.servs[s[0]]; }).map(function(s){ return s[1]; });
+  if (sv.length) { L.push(''); L.push('🛠️ *SERVICIOS PEDIDOS:*'); sv.forEach(function(s){ L.push('• ' + s); }); }
+  if (S.obs) { L.push(''); L.push('💬 *Comentarios:* ' + S.obs); }
+  L.push('');
+  L.push('¿Me pasan el presupuesto? ¡Gracias!');
+  return L.join('\n');
+}
+
+/* ========== RESUMEN ========== */
+function renderResumen(){
+  var t = invTotals();
+  var inv = Object.keys(S.inv).map(function(id){ return S.inv[id]+' '+ITEMS[id].n.toLowerCase(); });
+  inv = inv.concat(S.custom);
+  var cs = CONDS.filter(function(c){ return S.conds[c[0]]; }).map(function(c){ return c[1]; });
+  var sv = SERVS.filter(function(s){ return S.servs[s[0]]; }).map(function(s){ return s[1]; });
+  $('resumen').innerHTML =
+    '<section><h3>Origen <a data-go="0">editar</a></h3><p>'+esc(lugarLinea(S.o)).replace(/\n/g,'<br>')+'</p></section>'
+  + '<section><h3>Destino <a data-go="1">editar</a></h3><p>'+esc(lugarLinea(S.d)).replace(/\n/g,'<br>')+'</p></section>'
+  + '<section><h3>Fecha <a data-go="2">editar</a></h3><p>'+(S.fecha?fmtFecha(S.fecha):'A definir')+' · '+esc(S.franja)+(S.flex?' · flexible':'')+'</p></section>'
+  + '<section><h3>Modalidad <a data-go="4">editar</a></h3><p>'+(S.modo==='camion'?'🚛 Solo camión y chofer — cargan y descargan ustedes':'🚛💪 Mudanza completa — nuestro equipo carga y descarga')+'</p></section>'
+  + '<section><h3>Inventario · ~'+t.m3+' m³ <a data-go="3">editar</a></h3>'+(inv.length?'<ul><li>'+inv.map(esc).join('</li><li>')+'</li></ul>':'<p>Sin objetos cargados</p>')+'</section>'
+  + ((cs.length||sv.length||S.obs)?'<section><h3>Condiciones y servicios <a data-go="4">editar</a></h3>'
+      +(cs.length?'<ul><li>'+cs.map(esc).join('</li><li>')+'</li></ul>':'')
+      +(sv.length?'<ul><li>'+sv.map(esc).join('</li><li>')+'</li></ul>':'')
+      +(S.obs?'<p>💬 '+esc(S.obs)+'</p>':'')+'</section>':'');
+  $('resumen').querySelectorAll('[data-go]').forEach(function(a){
+    a.addEventListener('click', function(){ go(parseInt(a.getAttribute('data-go'),10)); });
+  });
+}
+
+/* ========== NAVEGACIÓN ========== */
+var LABELS = ['Origen','Destino','Fecha','Inventario','Condiciones','Enviar'];
+function clearBad(){ document.querySelectorAll('.bad').forEach(function(el){ el.classList.remove('bad'); }); }
+function markBad(sel){ var el=document.querySelector(sel); if (el) el.classList.add('bad'); }
+function valid(step){
+  clearBad();
+  if (step===0 || step===1) {
+    var a = step===0 ? S.o : S.d;
+    var cont = step===0 ? '#formO' : '#formD';
+    if (!a.zona) { markBad(cont+' [data-f=zona]'); return 'Elegí el barrio o la localidad.'; }
+    if (!a.tipo) { markBad(cont+' [data-f=tipo]'); return 'Elegí el tipo de lugar (casa, departamento…).'; }
+    if (a.tipo==='Departamento' && !a.piso.trim()) { markBad(cont+' [data-f=piso]'); return 'Decinos en qué piso está el departamento.'; }
+    if (!a.dist) { markBad(cont+' [data-f=dist]'); return 'Marcá a qué distancia puede parar el camión.'; }
+  }
+  if (step===5) {
+    if (!S.nombre.trim()) { markBad('#f-nombre'); return 'Poné tu nombre para que sepamos a quién cotizarle.'; }
+    if (!$('f-ok').checked) { markBad('#f-ok-wrap'); return 'Confirmá que los datos del resumen son correctos.'; }
+  }
+  return '';
+}
+function go(n){
+  S.step = n; save();
+  document.querySelectorAll('.step').forEach(function(s){ s.classList.toggle('on', parseInt(s.getAttribute('data-step'),10)===n); });
+  var dots = $('prog').children;
+  for (var i=0;i<dots.length;i++) dots[i].classList.toggle('on', i<=n);
+  $('progLabel').textContent = 'Paso '+(n+1)+' de 6 · '+LABELS[n];
+  $('btnBack').style.display = n>0 ? '' : 'none';
+  $('btnNext').style.display = n<5 ? '' : 'none';
+  $('btnSend').style.display = n===5 ? '' : 'none';
+  $('err').classList.remove('on');
+  if (n===5) renderResumen();
+  window.scrollTo({top:0, behavior:'smooth'});
+  if (typeof gtag==='function') gtag('event','cotizador_full_paso',{ paso:n+1, nombre_paso:LABELS[n] });
+}
+$('btnNext').addEventListener('click', function(){
+  var e = valid(S.step);
+  if (e) { $('err').textContent = e; $('err').classList.add('on'); window.scrollTo({top:0,behavior:'smooth'}); return; }
+  go(S.step+1);
+});
+$('btnBack').addEventListener('click', function(){ go(Math.max(0,S.step-1)); });
+
+/* ========== ENVÍO ========== */
+$('btnSend').addEventListener('click', function(){
+  S.nombre = $('f-nombre').value.trim(); S.tel = $('f-tel').value.trim(); save();
+  var e = valid(5);
+  if (e) { $('err').textContent = e; $('err').classList.add('on'); window.scrollTo({top:0,behavior:'smooth'}); return; }
+  var t = invTotals();
+  var url = 'https://wa.me/' + WA + '?text=' + encodeURIComponent(buildMsg());
+  if (typeof gtag === 'function') {
+    // Mismo patrón que el form corto del index: click saliente a wa.me (alimenta lead_whatsapp)
+    gtag('event', 'click', { link_domain:'wa.me', link_url:'cotizador_full', outbound:true, event_source:'cotizador_full', servicio:'Mudanza' });
+    gtag('event', 'cotizador_full_enviado', { objetos:t.n, m3:t.m3, origen_zona:S.o.zona, destino_zona:S.d.zona, flexible:S.flex?1:0, modalidad:S.modo });
+    // Conversión de Google Ads lead_mudanza (el cotizador completo es siempre mudanza)
+    gtag('event', 'conversion', { send_to: 'AW-881512631/D-NvCKS-sIAdELehq6QD' });
+    gtag('event', 'lead_mudanza', { event_source: 'cotizador_full' });
+  }
+  try { localStorage.removeItem('cotizador_v1'); } catch(err){}
+  window.open(url, '_blank', 'noopener');
+});
+
+/* ========== INIT ========== */
+bindDirForm('o'); bindDirForm('d');
+renderTabs(); renderItems(); renderCustom();
+renderModo();
+renderOpts('conds', CONDS, 'conds');
+renderServs();
+(function(){
+  var f=$('f-fecha'); var today=new Date().toISOString().slice(0,10);
+  f.min=today; f.value=S.fecha||'';
+  ['change','input'].forEach(function(ev){ f.addEventListener(ev, function(){ S.fecha=f.value; save(); }); });
+  $('f-flex').checked=S.flex;
+  $('f-flex').addEventListener('change', function(){ S.flex=$('f-flex').checked; save(); $('f-flex-wrap').classList.toggle('sel',S.flex); });
+  $('f-flex-wrap').classList.toggle('sel',S.flex);
+  $('f-franja').querySelectorAll('.chip').forEach(function(c){
+    c.classList.toggle('on', c.getAttribute('data-v')===S.franja);
+    c.addEventListener('click', function(){
+      S.franja=c.getAttribute('data-v'); save();
+      $('f-franja').querySelectorAll('.chip').forEach(function(x){ x.classList.toggle('on',x===c); });
+    });
+  });
+  $('f-obs').value=S.obs; $('f-obs').addEventListener('input', function(){ S.obs=$('f-obs').value; save(); });
+  $('f-nombre').value=S.nombre; $('f-tel').value=S.tel;
+  $('f-nombre').addEventListener('input', function(){ S.nombre=$('f-nombre').value; save(); });
+  $('f-tel').addEventListener('input', function(){ S.tel=$('f-tel').value; save(); });
+  $('cust-add').addEventListener('click', function(){
+    var n=$('cust-n').value.trim(), dd=$('cust-d').value.trim();
+    $('cust-n').classList.toggle('bad', !n); $('cust-d').classList.toggle('bad', !dd);
+    if(!n || !dd) return;
+    S.custom.push(n + ' (' + dd + ')');
+    $('cust-n').value=''; $('cust-d').value='';
+    save(); renderCustom(); invFoot();
+  });
+  [$('cust-n'),$('cust-d')].forEach(function(inp){
+    inp.addEventListener('keydown', function(ev){ if(ev.key==='Enter'){ ev.preventDefault(); $('cust-add').click(); } });
+    inp.addEventListener('input', function(){ inp.classList.remove('bad'); });
+  });
+  // El calendario se abre tocando cualquier parte del campo
+  $('datebox').addEventListener('click', function(){
+    try { f.showPicker(); } catch(err) { f.focus(); }
+  });
+})();
+go(S.step||0);
+</script>
+</body>
+</html>
