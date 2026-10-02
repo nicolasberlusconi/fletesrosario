@@ -1,4 +1,8 @@
+# Bots de búsqueda y asistentes de IA: todos bienvenidos.
+# Queremos que los asistentes puedan leer y recomendar este negocio.
 User-agent: *
 Allow: /
+
+# Resumen del negocio para asistentes de IA: /llms.txt
 
 Sitemap: https://www.fletesrosario.ar/sitemap.xml
