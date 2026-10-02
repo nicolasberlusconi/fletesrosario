@@ -154,7 +154,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.95);backdro
 .err.on{display:block}
 .bad input,.bad select,.bad .chips{outline:2px solid var(--red);outline-offset:1px;border-radius:12px}
 .bad>label{color:var(--red)}
-input.bad,label.bad{outline:2px solid var(--red);outline-offset:1px;border-radius:12px}
+input.bad,label.bad,.datebox.bad{outline:2px solid var(--red);outline-offset:1px;border-radius:12px}
 .datebox{display:flex;align-items:center;gap:12px;border:1.5px solid var(--line);border-radius:13px;background:#fbfdff;padding:4px 6px 4px 14px;cursor:pointer}
 .datebox:active{border-color:var(--blue-l)}
 .datebox .cal{font-size:22px;flex:none}
@@ -219,7 +219,7 @@ input.bad,label.bad{outline:2px solid var(--red);outline-offset:1px;border-radiu
       <h2>¿Cuándo te mudás? 📅</h2>
       <p class="sub">Si todavía no tenés fecha exacta, poné una estimada y marcá "flexible".</p>
       <div class="field">
-        <label for="f-fecha">Fecha deseada</label>
+        <label for="f-fecha">Fecha deseada <span class="req">*</span></label>
         <div class="datebox" id="datebox">
           <span class="cal">📅</span>
           <input type="date" id="f-fecha">
@@ -413,9 +413,9 @@ function dirForm(which){
   + '<div class="field" data-f="zona"><label>Barrio o localidad <span class="req">*</span></label><select data-k="zona">'+zonaOpts+'</select></div>'
   + '<div class="field"><label>Dirección (calle y altura — opcional)</label><input type="text" data-k="dir" value="'+esc(a.dir)+'" placeholder="Ej: Córdoba 1300"><div class="hint">Si preferís, la pasás después por WhatsApp.</div></div>'
   + '<div class="field" data-f="tipo"><label>Tipo de lugar <span class="req">*</span></label><div class="chips">'+tipoChips+'</div></div>'
-  + (deptoish ? '<div class="field" data-f="piso"><label>Piso'+(a.tipo==='Departamento'?' <span class="req">*</span>':'')+'</label><input type="text" data-k="piso" value="'+esc(a.piso)+'" placeholder="Ej: PB, 3, 11…" style="max-width:140px"></div>'
-  + '<div class="field"><label>¿Hay ascensor?</label><div class="chips">'+ascChips+'</div></div>'
-  + (a.asc==='Sí' ? '<div class="field"><label>¿Entran los muebles grandes en el ascensor?</label><div class="chips">'+entChips+'</div></div>' : '') : '')
+  + (deptoish ? '<div class="field" data-f="piso"><label>Piso <span class="req">*</span></label><input type="text" data-k="piso" value="'+esc(a.piso)+'" placeholder="Ej: PB, 3, 11…" style="max-width:140px"></div>'
+  + '<div class="field" data-f="asc"><label>¿Hay ascensor? <span class="req">*</span></label><div class="chips">'+ascChips+'</div></div>'
+  + (a.asc==='Sí' ? '<div class="field" data-f="entran"><label>¿Entran los muebles grandes en el ascensor? <span class="req">*</span></label><div class="chips">'+entChips+'</div></div>' : '') : '')
   + '<div class="field" data-f="dist"><label>¿A qué distancia de la entrada puede parar el camión? <span class="req">*</span></label><div class="chips">'+distChips+'</div></div>';
 }
 function bindDirForm(which){
@@ -603,8 +603,14 @@ function valid(step){
     var cont = step===0 ? '#formO' : '#formD';
     if (!a.zona) { markBad(cont+' [data-f=zona]'); return 'Elegí el barrio o la localidad.'; }
     if (!a.tipo) { markBad(cont+' [data-f=tipo]'); return 'Elegí el tipo de lugar (casa, departamento…).'; }
-    if (a.tipo==='Departamento' && !a.piso.trim()) { markBad(cont+' [data-f=piso]'); return 'Decinos en qué piso está el departamento.'; }
+    var deptoish = (a.tipo==='Departamento'||a.tipo==='PH'||a.tipo==='Oficina o comercio');
+    if (deptoish && !a.piso.trim()) { markBad(cont+' [data-f=piso]'); return 'Decinos el piso (poné PB si es planta baja).'; }
+    if (deptoish && !a.asc) { markBad(cont+' [data-f=asc]'); return 'Decinos si hay ascensor — cambia el presupuesto.'; }
+    if (deptoish && a.asc==='Sí' && !a.entran) { markBad(cont+' [data-f=entran]'); return 'Decinos si los muebles grandes entran en el ascensor.'; }
     if (!a.dist) { markBad(cont+' [data-f=dist]'); return 'Marcá a qué distancia puede parar el camión.'; }
+  }
+  if (step===2) {
+    if (!S.fecha) { markBad('#datebox'); return 'Elegí una fecha estimada — si todavía no es segura, marcá "fecha flexible".'; }
   }
   if (step===5) {
     if (!S.nombre.trim()) { markBad('#f-nombre'); return 'Poné tu nombre para que sepamos a quién cotizarle.'; }
