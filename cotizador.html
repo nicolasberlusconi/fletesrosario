@@ -110,8 +110,10 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.95);backdro
 .tab:not(.on) .n{background:var(--sky);color:var(--blue)}
 .items{display:none}
 .items.on{display:block}
-.item{display:flex;align-items:center;gap:10px;padding:10px 2px;border-bottom:1px solid var(--line)}
+.item{display:flex;align-items:center;gap:10px;padding:10px 8px;border-bottom:1px solid var(--line);border-radius:10px;transition:background .15s}
 .item:last-child{border-bottom:0}
+.item.has{background:var(--sky);box-shadow:inset 3px 0 0 var(--blue)}
+.item.has .q{color:var(--blue);font-size:17px}
 .item .emoji{font-size:20px;flex:none;width:28px;text-align:center}
 .item .name{flex:1;font-size:14.5px;font-weight:700;color:var(--ink);line-height:1.25}
 .item .name small{display:block;font-weight:600;color:var(--mut);font-size:12px}
@@ -119,7 +121,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.95);backdro
 .counter button{width:36px;height:36px;border-radius:11px;border:1.5px solid var(--line);background:#fff;font-size:19px;font-weight:800;color:var(--blue);cursor:pointer;line-height:1}
 .counter button:active{background:var(--sky)}
 .counter .q{width:34px;text-align:center;font-weight:800;font-size:15.5px;color:var(--navy)}
-.item.has .name{color:var(--navy)}
+.item.has .name{color:var(--navy);font-weight:800}
 .inv-foot{display:flex;justify-content:space-between;align-items:center;margin-top:14px;padding-top:12px;border-top:1.5px solid var(--line);font-size:13.5px}
 .inv-foot b{color:var(--navy)}
 .addcustom{margin-top:14px;background:var(--sky);border-radius:13px;padding:13px}
@@ -160,6 +162,19 @@ input.bad,label.bad{outline:2px solid var(--red);outline-offset:1px;border-radiu
 .datebox input:focus{outline:none}
 .ico{width:19px;height:19px;flex:none}
 .trust{text-align:center;font-size:12.5px;color:var(--mut);margin:-26px 0 40px}
+.tab.pend::after{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--red);margin-left:6px;vertical-align:middle}
+.modal-bg{position:fixed;inset:0;background:rgba(12,36,57,.55);z-index:100;display:none;align-items:flex-end;justify-content:center;padding:16px}
+.modal-bg.on{display:flex}
+@media(min-width:620px){.modal-bg{align-items:center}}
+.modal{background:#fff;border-radius:20px;max-width:440px;width:100%;padding:22px 20px;box-shadow:0 20px 60px rgba(0,0,0,.3)}
+.modal h3{font-size:17.5px;color:var(--navy);line-height:1.3;margin-bottom:6px}
+.modal p{font-size:13.5px;color:var(--mut);margin-bottom:12px}
+.modal .cats{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:16px}
+.modal .cats span{background:var(--sky);color:var(--navy);border-radius:999px;padding:6px 13px;font-size:13px;font-weight:700}
+.modal .btn{width:100%}
+.modal .btn+.btn{margin-top:9px}
+.btn-soft{background:var(--sky);color:var(--navy)}
+.btn-blue{background:var(--blue);color:#fff;box-shadow:0 6px 18px rgba(34,104,169,.3)}
 </style>
 </head>
 <body>
@@ -298,6 +313,16 @@ input.bad,label.bad{outline:2px solid var(--red);outline-offset:1px;border-radiu
   <p class="trust">🔒 No compartimos tus datos · Respondemos en el día · ★ 4.7 en Google</p>
 </main>
 
+<div class="modal-bg" id="invModal" role="dialog" aria-modal="true" aria-labelledby="invModalTitle">
+  <div class="modal">
+    <h3 id="invModalTitle">Antes de seguir… 👀</h3>
+    <p id="invModalText">El presupuesto se arma con este inventario. Quedaron categorías sin nada cargado:</p>
+    <div class="cats" id="invModalCats"></div>
+    <button type="button" class="btn btn-blue" id="invModalReview">Ir a revisar</button>
+    <button type="button" class="btn btn-soft" id="invModalOk">No tengo nada de eso, seguir</button>
+  </div>
+</div>
+
 <script>
 /* ========== DATOS ========== */
 var WA = '5493413889017';
@@ -363,7 +388,7 @@ var S = {
   o: {zona:'', dir:'', tipo:'', piso:'', asc:'', entran:'', dist:''},
   d: {zona:'', dir:'', tipo:'', piso:'', asc:'', entran:'', dist:''},
   fecha:'', franja:'Indistinto', flex:false,
-  inv:{}, custom:[],
+  inv:{}, custom:[], vis:{}, invOk:false,
   modo:'equipo', conds:{}, servs:{}, obs:'',
   nombre:'', tel:''
 };
@@ -412,9 +437,11 @@ function bindDirForm(which){
 /* ========== INVENTARIO ========== */
 var curTab = Object.keys(CAT)[0];
 function renderTabs(){
+  S.vis[curTab]=true; save();
   $('tabs').innerHTML = Object.keys(CAT).map(function(amb){
     var count = CAT[amb].reduce(function(acc,it){ return acc + (S.inv[it[0]]||0); }, 0);
-    return '<button type="button" class="tab'+(amb===curTab?' on':'')+'" data-amb="'+amb+'">'+amb+(count?'<span class="n">'+count+'</span>':'')+'</button>';
+    var pend = !S.vis[amb] && !count;
+    return '<button type="button" class="tab'+(amb===curTab?' on':'')+(pend?' pend':'')+'" data-amb="'+amb+'">'+amb+(count?'<span class="n">'+count+'</span>':'')+'</button>';
   }).join('');
   $('tabs').querySelectorAll('.tab').forEach(function(t){
     t.addEventListener('click', function(){ curTab = t.getAttribute('data-amb'); renderTabs(); renderItems(); });
@@ -433,6 +460,7 @@ function renderItems(){
       var id=b.getAttribute('data-id'), d=parseInt(b.getAttribute('data-d'),10);
       S.inv[id] = Math.max(0, (S.inv[id]||0) + d);
       if (!S.inv[id]) delete S.inv[id];
+      S.invOk = false;
       save(); renderTabs(); renderItems(); invFoot();
     });
   });
@@ -598,10 +626,46 @@ function go(n){
   window.scrollTo({top:0, behavior:'smooth'});
   if (typeof gtag==='function') gtag('event','cotizador_full_paso',{ paso:n+1, nombre_paso:LABELS[n] });
 }
+function catsVacias(){
+  return Object.keys(CAT).filter(function(amb){
+    return !CAT[amb].some(function(it){ return S.inv[it[0]]; });
+  });
+}
 $('btnNext').addEventListener('click', function(){
   var e = valid(S.step);
   if (e) { $('err').textContent = e; $('err').classList.add('on'); window.scrollTo({top:0,behavior:'smooth'}); return; }
+  if (S.step===3 && !S.invOk) {
+    var vacias = catsVacias(), t = invTotals();
+    if (vacias.length) {
+      if (!t.n) {
+        $('invModalTitle').textContent = 'No cargaste ningún objeto 🤔';
+        $('invModalText').textContent = 'El presupuesto se arma con el inventario. Si preferís, podés seguir y detallarlo por WhatsApp.';
+        $('invModalOk').textContent = 'Seguir igual, lo detallo por WhatsApp';
+        $('invModalReview').textContent = 'Cargar objetos';
+      } else {
+        $('invModalTitle').textContent = 'Antes de seguir… 👀';
+        $('invModalText').textContent = 'El presupuesto se arma con este inventario. Quedaron categorías sin nada cargado:';
+        $('invModalOk').textContent = 'No tengo nada de eso, seguir';
+        $('invModalReview').textContent = 'Ir a revisar';
+      }
+      $('invModalCats').innerHTML = vacias.map(function(a){ return '<span>'+a+'</span>'; }).join('');
+      $('invModal').classList.add('on');
+      if (typeof gtag==='function') gtag('event','cotizador_full_aviso_inventario',{ vacias:vacias.length, objetos:t.n });
+      return;
+    }
+  }
   go(S.step+1);
+});
+$('invModalOk').addEventListener('click', function(){
+  S.invOk = true; save();
+  $('invModal').classList.remove('on');
+  go(4);
+});
+$('invModalReview').addEventListener('click', function(){
+  $('invModal').classList.remove('on');
+  var vacias = catsVacias();
+  if (vacias.length) { curTab = vacias[0]; renderTabs(); renderItems(); }
+  var el = document.getElementById('tabs'); if (el) el.scrollIntoView({behavior:'smooth', block:'center'});
 });
 $('btnBack').addEventListener('click', function(){ go(Math.max(0,S.step-1)); });
 
