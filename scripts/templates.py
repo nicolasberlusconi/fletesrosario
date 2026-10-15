@@ -96,6 +96,9 @@ footer nav{margin-bottom:8px;display:flex;flex-wrap:wrap;gap:6px 16px;justify-co
 .tip b:first-child{color:var(--navy)}
 .toc{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 18px;margin-top:20px;font-size:14.5px}
 .toc ol{padding-left:20px;margin-top:6px}
+.toc li{margin:0}
+.toc a{display:inline-block;padding:9px 0;min-height:24px}
+.prose a,ul.checks a,.sources a,.tip a,.card p a{text-decoration:underline;text-underline-offset:2px}
 .sources{font-size:13px;color:var(--mut)}
 .sources li{margin:4px 0}
 """
