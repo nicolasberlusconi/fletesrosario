@@ -8,6 +8,7 @@ Producción: https://www.fletesrosario.ar · repo `nicolasberlusconi/fletesrosar
 - `index.html` y `cotizador.html` se editan **a mano**.
 - Todo lo demás se **genera**: `python3 scripts/build.py` lee `content/services/*.json` y `content/blog/*.json` y escribe las páginas, `/blog/`, `/servicios/`, `sitemap.xml` y la sección de páginas de `llms.txt`. **Nunca editar a mano un HTML generado**: se pisa en el próximo build.
 - Plantillas en `scripts/templates.py` (CSS, header, footer, GA4, schema). Rutas de assets absolutas (`/img/...`).
+- **Borradores**: `content/drafts/{services,blog}/` no se generan ni se publican. Para publicar, mover el JSON a `content/services/` o `content/blog/` y correr `publish.py` (así se respeta `max_per_day` sin perder el trabajo).
 - URLs: servicios en la raíz (`/mudanzas-funes.html`, ya indexadas, no cambiarlas); blog en `/blog/<slug>/`.
 
 ## Tracking (no romper)
@@ -42,7 +43,7 @@ Antes de escribir: análisis de los 3 primeros resultados orgánicos en google.c
 - No crear páginas de "fletes" chicos: Mario solo quiere mudanzas.
 
 ## Semrush
-Proyecto `www.fletesrosario.ar` (Site Audit id 31613167). La API/MCP no tiene unidades: consultar por la web en Chrome. Los "links externos rotos" a wa.me (HTTP 429) son falsos positivos. El email va envuelto en `<!--email_off-->` para que Cloudflare no lo ofusque (generaba un 404 en `/cdn-cgi/l/email-protection`). HSTS en Cloudflare: **apagado por decisión de Nico (15-oct-2026)**; el aviso "No HSTS support" de Semrush se ignora.
+Proyecto `www.fletesrosario.ar` (Site Audit id 31613167). La API/MCP no tiene unidades: consultar por la web en Chrome. Los "links externos rotos" a wa.me (HTTP 429) son falsos positivos. El email va envuelto en `<!--email_off-->` para que Cloudflare no lo ofusque (generaba un 404 en `/cdn-cgi/l/email-protection`). Snapshot de competencia, brecha de keywords y visibilidad en IA: `data/semrush-competencia-2026-10-15.md` (revisar una vez por trimestre). HSTS en Cloudflare: **apagado por decisión de Nico (15-oct-2026)**; el aviso "No HSTS support" de Semrush se ignora.
 
 ## Límites
 - `data/config.json → max_per_day` (1 publicación por día).

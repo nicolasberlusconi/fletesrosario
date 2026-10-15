@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://www.fletesrosario.ar/blog/como-embalar-para-una-mudanza/</loc><lastmod>2026-10-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.fletesrosario.ar/blog/</loc><lastmod>2026-10-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.fletesrosario.ar/blog/como-embalar-para-una-mudanza/</loc><lastmod>%cs</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.fletesrosario.ar/blog/</loc><lastmod>%cs</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.fletesrosario.ar/cotizador.html</loc><lastmod>%cs</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://www.fletesrosario.ar/</loc><lastmod>%cs</lastmod><changefreq>monthly</changefreq><priority>1.0</priority></url>
   <url><loc>https://www.fletesrosario.ar/izamiento-muebles-rosario.html</loc><lastmod>2026-10-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.fletesrosario.ar/mudanzas-funes.html</loc><lastmod>2026-10-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.fletesrosario.ar/mudanzas-roldan.html</loc><lastmod>2026-10-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.fletesrosario.ar/mudanzas-san-lorenzo.html</loc><lastmod>2026-10-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.fletesrosario.ar/mudanzas-villa-gobernador-galvez.html</loc><lastmod>2026-10-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.fletesrosario.ar/servicios/</loc><lastmod>2026-10-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.fletesrosario.ar/mudanzas-funes.html</loc><lastmod>%cs</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.fletesrosario.ar/mudanzas-roldan.html</loc><lastmod>%cs</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.fletesrosario.ar/mudanzas-san-lorenzo.html</loc><lastmod>%cs</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.fletesrosario.ar/mudanzas-villa-gobernador-galvez.html</loc><lastmod>%cs</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.fletesrosario.ar/servicios/</loc><lastmod>%cs</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>

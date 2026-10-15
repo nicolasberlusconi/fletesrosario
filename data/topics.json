@@ -38,13 +38,5 @@
     "exclude": "flete|guardamuebles|internacional|bahia blanca|buenos aires|capital",
     "prefer": "^cuanto sale una mudanza$",
     "notes": "Mario NO tiene lista de precios: cada mudanza se cotiza a medida. PROHIBIDO publicar montos, rangos o precios por hora/km. El artículo explica qué factores definen el precio (volumen/inventario, piso y ascensor, distancia del camión, modalidad equipo vs solo camión, desarme/armado, izamiento, fecha flexible = mejor precio) y por qué conviene un precio cerrado con inventario. CTA al cotizador."
-  },
-  {
-    "slug": "larga-distancia",
-    "title": "Mudanzas de larga distancia",
-    "pattern": "larga distancia|interior del pais",
-    "requires_data": [],
-    "notes": "Sin precios (cotización a medida). Solo contenido sobre cómo se organiza una mudanza larga y qué se tiene en cuenta.",
-    "exclude": "internacional|flete"
   }
 ]
