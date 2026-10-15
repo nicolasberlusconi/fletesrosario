@@ -35,8 +35,8 @@ gtag('config', 'AW-881512631');
     s.src='https://www.googletagmanager.com/gtag/js?id=G-K1YYD5M4XR';
     document.head.appendChild(s);
   }
-  if(document.readyState==='complete'){ setTimeout(load,0); }
-  else { window.addEventListener('load',function(){ setTimeout(load,0); }); }
+  if(document.readyState==='complete'){ setTimeout(load,2000); }
+  else { window.addEventListener('load',function(){ setTimeout(load,2000); }); }
   ['pointerdown','keydown','touchstart'].forEach(function(ev){
     window.addEventListener(ev, load, {once:true, passive:true});
   });
