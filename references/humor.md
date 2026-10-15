@@ -7,4 +7,4 @@ Uso: liviano y ocasional, nunca a costa del cliente. Máximo un guiño por artí
 
 ## TODO — necesito de Mario/Nico
 - TODO: frases, chistes internos o situaciones graciosas reales de mudanzas (ej: lo más raro que les tocó mudar).
-- TODO: ¿hay algún dicho o latiguillo del equipo?
+- Latiguillo propuesto (de la respuesta real del dueño a una reseña): "No hicimos más que cumplir con lo acordado". Sirve como cierre humilde.

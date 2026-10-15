@@ -9,6 +9,9 @@
 - Palabras locales: palier, consorcio, depto, heladera, lavarropas, placard, flete, garrafa, cinta de embalar.
 - Evitar: "pertenencias", "enseres", "frigorífico", "nevera", "lavadora", "piso" (por departamento), "vosotros".
 
+## Slogan real de la marca
+- "Confianza y responsabilidad aseguradas" (del camión y la web original). Usarlo como cierre o firma, no más de una vez por página.
+
 ## Ejemplos reales del tono (de la web, aprobados)
 - "¿El sillón no pasa por la escalera? ¿El placard no entra en el ascensor? Lo subimos o bajamos por el balcón."
 - "Cuidamos lo tuyo como si fuera nuestro."

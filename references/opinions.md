@@ -7,6 +7,9 @@
 - **Izamiento cuando no pasa por la escalera**: es la especialidad; mejor izar que forzar un mueble por un palier.
 - **No se ofrece**: embalaje completo ni venta de cajas/materiales (decisión oct-2026). Sí: desarme/armado y desinstalación/instalación de lavarropas y aires.
 
+- **No hay lista de precios**: cada mudanza tiene sus particularidades y se cotiza a medida, con el inventario y los accesos. Desconfiar de quien da un precio sin saber qué hay que mudar. (Confirmado por Nico, 15-oct-2026)
+- **No se ofrece guardamuebles.**
+
 ## TODO — necesito de Mario
 - TODO: ¿qué es lo que más ve que la gente hace mal al embalar?
 - TODO: ¿qué recomendaría nunca hacer en una mudanza?

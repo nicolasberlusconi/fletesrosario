@@ -28,7 +28,9 @@ Producción: https://www.fletesrosario.ar · repo `nicolasberlusconi/fletesrosar
 - **Nunca inventar datos**: precios, cantidades, clientes, reseñas, plazos. Solo lo que está en `references/stats.md` y `references/stories.md`, o datos de terceros **con fuente citada**. Si falta un dato, el tema no se escribe (por eso `topics.json` tiene `requires_data`).
 - Voz: `references/voice.md` (rioplatense con voseo, directo, concreto). Opiniones reales: `references/opinions.md`.
 - No mencionar la cantidad de reseñas de Google (cambia). Sí "4.7★ en Google".
-- La empresa **no ofrece** embalaje completo ni venta de cajas. Sí: desarme/armado, desinstalación/instalación de lavarropas y aires, izamiento.
+- La empresa **no ofrece** embalaje completo, venta de cajas ni guardamuebles. Sí: desarme/armado, desinstalación/instalación de lavarropas y aires, izamiento.
+- **No hay lista de precios**: todo se cotiza a medida. Nunca publicar montos, rangos, precio por hora o por km. Los artículos de "cuánto cuesta" explican qué define el precio y llevan al cotizador.
+- Historias: solo lo que cada cliente escribió en su reseña real (ver regla en `references/stories.md`). Escenas inventadas solo como ejemplo explícito y sin nombre de cliente.
 - Sin links pagos ni intercambiados.
 
 ## Checklist de un artículo (lo valida `publish.py`)
@@ -38,6 +40,9 @@ Antes de escribir: análisis de los 3 primeros resultados orgánicos en google.c
 ## Páginas de servicio
 - Tope `data/config.json → service_cap` (10). Solo crear una página si tiene ≥3 elementos locales reales (documentarlos en `local_elements`). Si no, se lista y se saltea.
 - No crear páginas de "fletes" chicos: Mario solo quiere mudanzas.
+
+## Semrush
+Proyecto `www.fletesrosario.ar` (Site Audit id 31613167). La API/MCP no tiene unidades: consultar por la web en Chrome. Los "links externos rotos" a wa.me (HTTP 429) son falsos positivos. El email va envuelto en `<!--email_off-->` para que Cloudflare no lo ofusque (generaba un 404 en `/cdn-cgi/l/email-protection`).
 
 ## Límites
 - `data/config.json → max_per_day` (1 publicación por día).

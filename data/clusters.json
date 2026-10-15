@@ -40,6 +40,26 @@
     "used": false
   },
   {
+    "slug": "precio-mudanza",
+    "title": "Cuánto cuesta una mudanza en Rosario",
+    "requires_data": [],
+    "notes": "Mario NO tiene lista de precios: cada mudanza se cotiza a medida. PROHIBIDO publicar montos, rangos o precios por hora/km. El artículo explica qué factores definen el precio (volumen/inventario, piso y ascensor, distancia del camión, modalidad equipo vs solo camión, desarme/armado, izamiento, fecha flexible = mejor precio) y por qué conviene un precio cerrado con inventario. CTA al cotizador.",
+    "primary": "cuanto sale una mudanza",
+    "primary_volume": 70,
+    "secondary": [
+      "mudanza precio por hora",
+      "precio mudanza",
+      "mudanzas al interior del pais precios",
+      "mudanzas larga distancia precios",
+      "cuanto cuesta una mudanza",
+      "mudanzas rosario precios",
+      "precio mudanza por km",
+      "servicio de mudanza precio"
+    ],
+    "total_volume": 640,
+    "used": false
+  },
+  {
     "slug": "como-embalar",
     "title": "Cómo embalar para una mudanza",
     "requires_data": [],
@@ -69,44 +89,6 @@
       "tips para mudanza"
     ],
     "total_volume": 140,
-    "used": false
-  },
-  {
-    "slug": "precio-mudanza",
-    "title": "Cuánto cuesta una mudanza en Rosario",
-    "requires_data": [
-      "precios_reales"
-    ],
-    "notes": "",
-    "primary": "fletes precios",
-    "primary_volume": 260,
-    "secondary": [
-      "fletes y mudanzas precios",
-      "fletes rosario precios",
-      "mudanza precio por hora",
-      "minifletes precios",
-      "precio mudanza",
-      "cuanto sale una mudanza",
-      "mudanzas al interior del pais precios",
-      "mudanzas larga distancia precios"
-    ],
-    "total_volume": 1560,
-    "used": false
-  },
-  {
-    "slug": "guardamuebles",
-    "title": "Guardamuebles",
-    "requires_data": [
-      "servicio_ofrecido"
-    ],
-    "notes": "",
-    "primary": "guardamuebles precio mes",
-    "primary_volume": 210,
-    "secondary": [
-      "guardamuebles precios",
-      "cuanto cuesta un guardamuebles"
-    ],
-    "total_volume": 300,
     "used": false
   }
 ]

@@ -356,6 +356,11 @@ def render_blog_index(posts):
     <p class="lead">Lo que aprendimos en más de 20 años mudando casas y departamentos en Rosario, explicado para que lo apliques en tu mudanza.</p>
   </div>
   <section><div class="cards">{cards}</div></section>
+  <section class="prose">
+    <h2>Para qué sirven estas guías</h2>
+    <p>Una mudanza sale bien cuando se prepara bien. En estas guías juntamos lo que vemos todas las semanas en casas y departamentos de Rosario: cómo embalar para que no se rompa nada, qué hacer con la heladera y el lavarropas, qué preguntar al consorcio antes del día y qué hacer cuando un mueble no entra en el ascensor.</p>
+    <p>Son consejos prácticos, sin vueltas, escritos por el equipo que hace las mudanzas. Cuando citamos un dato técnico, como cuánto esperar para enchufar una heladera, dejamos la fuente del fabricante. Y si después de leerlas preferís que nos ocupemos nosotros, podés <a href="/cotizador.html">cotizar tu mudanza online</a>.</p>
+  </section>
   {cta_final()}
 </main>
 """ + foot("blog_index"))
@@ -379,6 +384,12 @@ def render_services_index(services):
     {ctas()}
   </div>
   <section><div class="cards">{cards}</div></section>
+  <section>
+    <h2>Dos formas de mudarte con nosotros</h2>
+    <p><b>Mudanza completa:</b> nuestro equipo carga, traslada y descarga todo, con desarme y armado de muebles y desinstalación de lavarropas y aires si los necesitás. Es la opción para despreocuparte: te pasamos un precio cerrado y el día de la mudanza no hay sorpresas.</p>
+    <p><b>Solo camión y chofer:</b> si preferís cargar y descargar con tu gente, ponemos el camión adecuado y el chofer. Ideal para mudanzas chicas o cuando ya tenés quien ayude.</p>
+    <p>En los dos casos el precio se arma con tu inventario y los accesos de cada lugar (piso, ascensor, distancia del camión). Lo cargás en el <a href="/cotizador.html">cotizador online</a> en 2 minutos y te respondemos por WhatsApp en el día. Trabajamos en todos los barrios de Rosario y en Funes, Roldán, Villa Gobernador Gálvez, Granadero Baigorria, Capitán Bermúdez, San Lorenzo, Pérez y alrededores, y también hacemos mudanzas de larga distancia.</p>
+  </section>
   {cta_final()}
 </main>
 """ + foot("servicios_index"))

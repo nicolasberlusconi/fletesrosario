@@ -16,7 +16,8 @@ DATA = ROOT / "data"
 # Marcas de competidores y términos que nunca queremos atacar con contenido.
 BRANDS = ["verga", "vergahnos", "lavaque", "mudadora", "july", "miranda", "abril", "premium",
           "neutral", "sbrizzi", "fletalo", "transportes argentinos", "mudanzas argentinas",
-          "luis", "f44", "abacan", "mudanzas af", "expreso tas", "mudamos todo"]
+          "luis", "f44", "abacan", "mudanzas af", "expreso tas", "mudamos todo",
+          "guardamuebles", "baulera"]  # guardamuebles: Mario no lo ofrece
 EXCLUDE = [r"\ben ingles\b", r"\bcomo ser\b", r"\bconvertirse en\b", r"\btrabajo de\b",
            r"\bempleo\b", r"\bsueldo\b", r"\bsignificado\b", r"\bsinonimo\b"]
 INFO = re.compile(r"\b(como|que|cuanto|cuantas|cual|checklist|lista|consejos|tips|guia|pasos|organizar|"

@@ -12,7 +12,9 @@
 - Heladera: esperar 4–6 h si viajó parada, 12–24 h si viajó acostada, 24 h si no se sabe. Fuente: Haier (haier-europe.com/es_ES/blogs/news/enchufar-nevera-nueva). El manual del modelo manda.
 - Lavarropas: los tornillos de transporte (pernos de anclaje) traban el tambor; se retiran al instalar. Fuente: Samsung Argentina.
 
-## TODO — necesito de Mario (sin esto NO se escriben artículos de precios)
-- TODO: rangos de precio reales 2026 (ej: depto 1 amb, 2-3 amb, casa; Rosario→Funes; precio por hora de flete).
+## Precios
+- **No existen precios publicables**: todo se cotiza a medida (confirmado 15-oct-2026). Prohibido publicar montos, rangos, precio por hora o por km.
+
+## TODO — opcionales, si Mario los quiere dar
 - TODO: cuántas mudanzas hacen por mes/año (aproximado real).
 - TODO: tiempos reales promedio por tipo de mudanza.
