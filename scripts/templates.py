@@ -20,7 +20,8 @@ ORG = {
     "telephone": PHONE, "logo": f"{SITE}/img/logo.png",
     "address": {"@type": "PostalAddress", "streetAddress": "José C. Paz 767", "addressLocality": "Rosario",
                 "addressRegion": "Santa Fe", "postalCode": "S2000", "addressCountry": "AR"},
-    "sameAs": ["https://www.google.com/maps/place/Fletes+Mudanzas+Rosario/@-32.908093,-60.6858341,17z/data=!3m1!4b1!4m6!3m5!1s0x95b6536591fc4619:0x755a717d0d95259d!8m2!3d-32.908093!4d-60.6858341!16s%2Fg%2F11byyk95l6", "https://www.facebook.com/fletesmudanzasrosario/"],
+    "sameAs": ["https://www.google.com/maps/place/Fletes+Mudanzas+Rosario/@-32.908093,-60.6858341,17z/data=!3m1!4b1!4m6!3m5!1s0x95b6536591fc4619:0x755a717d0d95259d!8m2!3d-32.908093!4d-60.6858341!16s%2Fg%2F11byyk95l6", "https://www.facebook.com/fletesmudanzasrosario/",
+               "https://www.instagram.com/fletesmudanzasrosario/"],
 }
 
 CSS = """
