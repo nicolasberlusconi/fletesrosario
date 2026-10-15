@@ -221,7 +221,7 @@ def cta_final():
 def foot(pagekey):
     return f"""<footer>
   <div class="wrap">
-    <nav><a href="/">Inicio</a><a href="/servicios/">Servicios</a><a href="/blog/">Guías de mudanza</a><a href="/cotizador.html">Cotizador</a></nav>
+    <nav><a href="/">Mudanzas en Rosario</a><a href="/servicios/">Servicios</a><a href="/blog/">Guías de mudanza</a><a href="/cotizador.html">Cotizador</a></nav>
     © <span id="y">2026</span> {esc(BRAND)} · <a href="tel:{PHONE}">341 388-9017</a>
   </div>
 </footer>
