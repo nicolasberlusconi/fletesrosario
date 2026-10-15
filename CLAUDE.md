@@ -42,7 +42,7 @@ Antes de escribir: análisis de los 3 primeros resultados orgánicos en google.c
 - No crear páginas de "fletes" chicos: Mario solo quiere mudanzas.
 
 ## Semrush
-Proyecto `www.fletesrosario.ar` (Site Audit id 31613167). La API/MCP no tiene unidades: consultar por la web en Chrome. Los "links externos rotos" a wa.me (HTTP 429) son falsos positivos. El email va envuelto en `<!--email_off-->` para que Cloudflare no lo ofusque (generaba un 404 en `/cdn-cgi/l/email-protection`).
+Proyecto `www.fletesrosario.ar` (Site Audit id 31613167). La API/MCP no tiene unidades: consultar por la web en Chrome. Los "links externos rotos" a wa.me (HTTP 429) son falsos positivos. El email va envuelto en `<!--email_off-->` para que Cloudflare no lo ofusque (generaba un 404 en `/cdn-cgi/l/email-protection`). HSTS en Cloudflare: **apagado por decisión de Nico (15-oct-2026)**; el aviso "No HSTS support" de Semrush se ignora.
 
 ## Límites
 - `data/config.json → max_per_day` (1 publicación por día).
