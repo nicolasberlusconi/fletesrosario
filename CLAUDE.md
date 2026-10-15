@@ -23,6 +23,7 @@ Producción: https://www.fletesrosario.ar · repo `nicolasberlusconi/fletesrosar
 | `scripts/build.py` | Genera páginas, índices, sitemap y llms.txt |
 | `scripts/audit.py` | 1 H1, title ≤60, description ≤155, canonical, JSON-LD válido, imágenes, links rotos, huérfanas, sitemap completo. Sale 1 si hay errores |
 | `scripts/dupcheck.py` | Similitud de texto entre páginas (shingles de 5 palabras). Umbral 60% |
+| `scripts/indexnow.py [url ...]` | Avisa a Bing/IndexNow de URLs nuevas o cambiadas (sin argumentos: todo el sitemap). Correr **después** del deploy. La clave es el archivo `<32 hex>.txt` de la raíz: no borrarlo ni renombrarlo |
 | `scripts/publish.py blog\|service <slug>` | Puerta de publicación: checklist on-page + build + audit + dupcheck + límite diario + registro en `data/publish-log.json` + marca keywords usadas |
 
 ## Reglas de contenido
@@ -51,4 +52,7 @@ Proyecto `www.fletesrosario.ar` (Site Audit id 31613167). La API/MCP no tiene un
 - Lighthouse local no corre en esta Mac (puppeteer no conecta con Chrome): medir con PageSpeed Insights sobre producción.
 
 ## Después de publicar
-Commit + push a `main`, esperar el build de Pages, verificar la URL en producción (HTTP 200 + título) y pedir indexación en Search Console (propiedad de dominio `fletesrosario.ar`).
+Commit + push a `main`, esperar el build de Pages, verificar la URL en producción (HTTP 200 + título) pedir indexación en Search Console (propiedad de dominio `fletesrosario.ar`) y correr `python3 scripts/indexnow.py <url>` (Bing, que es lo que usa ChatGPT para buscar).
+
+## Visibilidad en IA
+Los asistentes recomiendan negocios según fuentes externas (ficha de Google, Bing Places, directorios) tanto como por la web. `llms.txt` tiene el resumen del negocio y la lista de lo que NO se ofrece: mantenerla al día. `sameAs` del schema (home y `templates.ORG`) solo lleva perfiles propios del negocio: sumar cada directorio donde se dé de alta.
