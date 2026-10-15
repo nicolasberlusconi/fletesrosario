@@ -45,5 +45,8 @@
       "Cotizador online",
       "Cargá tu inventario y recibí el presupuesto por WhatsApp."
     ]
-  ]
+  ],
+  "img_small": "g-izamiento-480.webp",
+  "img_w": 700,
+  "img_h": 525
 }

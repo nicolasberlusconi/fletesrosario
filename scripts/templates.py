@@ -151,9 +151,12 @@ def breadcrumb_ld(items):
         {"@type": "ListItem", "position": i + 1, "name": n, "item": f"{SITE}{u}"} for i, (n, u) in enumerate(items)]})
 
 
-def head(title, desc, path, schemas, og_image="/img/og-image.jpg", og_type="website", preload_img=None):
+def head(title, desc, path, schemas, og_image="/img/og-image.jpg", og_type="website", preload_img=None, preload_srcset=None):
     url = f"{SITE}{path}"
-    pre = f'<link rel="preload" as="image" href="{preload_img}" fetchpriority="high">\n' if preload_img else ""
+    pre = ""
+    if preload_img:
+        extra = f' imagesrcset="{preload_srcset}" imagesizes="(max-width: 520px) 100vw, 820px"' if preload_srcset else ""
+        pre = f'<link rel="preload" as="image" href="{preload_img}"{extra} fetchpriority="high">\n'
     return f"""<!DOCTYPE html>
 <html lang="es-AR">
 <head>
@@ -239,7 +242,11 @@ def render_service(d):
                  "serviceType": "Mudanzas", "areaServed": d["area"], "provider": ORG})
     crumbs = breadcrumb_ld([("Inicio", "/"), ("Servicios", "/servicios/"), (d["kicker"], path)])
     body = d["body_html"] if "body_html" in d else zone_body(d["intro2"], d["bloques"])
-    return (head(d["meta_title"], d["meta_desc"], path, [schema, faq_ld(d["faqs"]), crumbs], preload_img=f"/img/{d['img']}")
+    srcset = (f'srcset="/img/{d["img_small"]} 480w, /img/{d["img"]} {d.get("img_w", 700)}w" sizes="(max-width: 520px) 100vw, 820px"'
+              if d.get("img_small") else "")
+    return (head(d["meta_title"], d["meta_desc"], path, [schema, faq_ld(d["faqs"]), crumbs],
+                 preload_img=f"/img/{d['img']}",
+                 preload_srcset=(f"/img/{d['img_small']} 480w, /img/{d['img']} {d.get('img_w', 700)}w" if d.get("img_small") else None))
             + f"""<main class="wrap">
   <p class="crumbs"><a href="/">Inicio</a> › <a href="/servicios/">Servicios</a> › {esc(d['kicker'])}</p>
   <div class="hero">
@@ -248,7 +255,7 @@ def render_service(d):
     <p class="lead">{esc(d['lead'])}</p>
     {ctas()}
     <p class="badges">★ 4.7 en Google · 20 años de experiencia · Cotización gratis en el día</p>
-    <img class="heroimg" src="/img/{d['img']}" alt="{esc(d['alt'])}" width="700" height="525" fetchpriority="high">
+    <img class="heroimg" src="/img/{d['img']}" {srcset} alt="{esc(d['alt'])}" width="{d.get('img_w', 700)}" height="{d.get('img_h', 525)}" fetchpriority="high">
   </div>
   {body}
   {faq_html(d['faqs'])}

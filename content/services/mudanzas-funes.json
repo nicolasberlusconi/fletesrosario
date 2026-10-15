@@ -65,5 +65,8 @@
     "20-25 min por autopista desde Rosario",
     "barrios cerrados con autorización de ingreso",
     "casas con parque: muebles de exterior y parrilla"
-  ]
+  ],
+  "img_small": "camion-mudanza-480.webp",
+  "img_w": 700,
+  "img_h": 525
 }

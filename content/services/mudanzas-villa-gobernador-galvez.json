@@ -65,5 +65,8 @@
     "acceso por Circunvalación",
     "comercios y depósitos de la zona",
     "cobertura sur: Alvear, Pueblo Esther, General Lagos, Arroyo Seco"
-  ]
+  ],
+  "img_small": "flete-mediano-480.webp",
+  "img_w": 700,
+  "img_h": 525
 }
