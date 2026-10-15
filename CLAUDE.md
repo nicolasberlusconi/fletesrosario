@@ -55,4 +55,5 @@ Proyecto `www.fletesrosario.ar` (Site Audit id 31613167). La API/MCP no tiene un
 Commit + push a `main`, esperar el build de Pages, verificar la URL en producción (HTTP 200 + título) pedir indexación en Search Console (propiedad de dominio `fletesrosario.ar`) y correr `python3 scripts/indexnow.py <url>` (Bing, que es lo que usa ChatGPT para buscar).
 
 ## Visibilidad en IA
+Bing Webmaster Tools: propiedad `https://www.fletesrosario.ar/` en la cuenta de Nico (existe desde 2023). Ahí está el reporte **AI Performance** (citas en Copilot) y el envío manual de URLs.
 Los asistentes recomiendan negocios según fuentes externas (ficha de Google, Bing Places, directorios) tanto como por la web. `llms.txt` tiene el resumen del negocio y la lista de lo que NO se ofrece: mantenerla al día. `sameAs` del schema (home y `templates.ORG`) solo lleva perfiles propios del negocio: sumar cada directorio donde se dé de alta.
