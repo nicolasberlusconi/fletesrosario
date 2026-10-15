@@ -1,0 +1,69 @@
+{
+  "file": "mudanzas-roldan.html",
+  "pagekey": "pagina_roldan",
+  "loc": "Roldán",
+  "order": 3,
+  "meta_title": "Mudanzas en Roldán | Fletes & Mudanzas Rosario",
+  "meta_desc": "Mudanzas Rosario–Roldán y dentro de Roldán: casas en barrios abiertos y cerrados, precio cerrado, equipo propio y 20 años de experiencia. Cotizá gratis.",
+  "lead": "Roldán es de las ciudades que más crecen en la zona, y nosotros crecimos mudando a sus nuevos vecinos: del departamento en Rosario a la casa nueva, en una sola vuelta y con precio cerrado.",
+  "img": "vereda-700.webp",
+  "alt": "Mudanza en la vereda con el camión de Fletes & Mudanzas Rosario",
+  "intro2": "La mayoría de nuestras mudanzas a Roldán son estrenos: casa nueva en un barrio abierto o cerrado, calles internas amplias donde el camión llega hasta la puerta, y familias que se llevan todo de una vez. Por autopista o RN9 estamos a media hora, así que el costo lo define tu inventario, no el viaje.",
+  "bloques": [
+    [
+      "🏗️ Casas a estrenar",
+      "Llegamos con la caja cerrada hasta la puerta; si la obra dejó accesos difíciles, lo resolvemos con carretones y mano de obra."
+    ],
+    [
+      "🏘️ Barrios abiertos y cerrados",
+      "Tierra de Sueños y los barrios nuevos: gestionamos el ingreso y los horarios con la administración cuando hace falta."
+    ],
+    [
+      "📦 Rosario → Roldán en una vuelta",
+      "Planificamos la carga para que una mudanza de 2-4 ambientes viaje completa en un solo viaje."
+    ],
+    [
+      "🔁 Dentro de Roldán y alrededores",
+      "Cambios de casa dentro de Roldán, o entre Roldán, Funes y San Jerónimo."
+    ]
+  ],
+  "faqs": [
+    [
+      "¿Cuánto cuesta una mudanza de Rosario a Roldán?",
+      "El precio se arma por volumen y accesos, no por kilómetros: Roldán está a media hora. Usá el cotizador online, cargás ambiente por ambiente, y recibís el presupuesto cerrado por WhatsApp en el día."
+    ],
+    [
+      "¿Pueden entrar al barrio cerrado?",
+      "Sí, trabajamos seguido en los barrios de Roldán. Si el barrio pide autorización, seguro o franja horaria, lo coordinamos antes para que el día de la mudanza sea entrar y descargar."
+    ],
+    [
+      "¿Llevan los muebles armados o los desarman?",
+      "Como prefieras: ofrecemos desarme y armado de placares, camas y modulares, así llegás y está todo en su lugar."
+    ],
+    [
+      "¿Hacen el viaje inverso, de Roldán a Rosario?",
+      "Sí, de ida y de vuelta, y también mudanzas locales dentro de Roldán."
+    ]
+  ],
+  "area": "Roldán, Santa Fe",
+  "related": [
+    [
+      "/mudanzas-funes.html",
+      "Mudanzas en Funes",
+      "Casas con parque y barrios cerrados, a 20 minutos de Rosario."
+    ],
+    [
+      "/blog/como-embalar-para-una-mudanza/",
+      "Cómo embalar para una mudanza",
+      "La guía paso a paso, con electrodomésticos y vajilla."
+    ]
+  ],
+  "kicker": "Mudanzas en Roldán",
+  "h1": "Mudanzas en Roldán",
+  "schema_name": "Mudanzas en Roldán",
+  "local_elements": [
+    "~30 min por autopista o RN9",
+    "barrios nuevos como Tierra de Sueños",
+    "cobertura de San Jerónimo y Funes"
+  ]
+}

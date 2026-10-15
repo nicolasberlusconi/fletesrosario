@@ -1,0 +1,69 @@
+{
+  "file": "mudanzas-funes.html",
+  "pagekey": "pagina_funes",
+  "loc": "Funes",
+  "order": 2,
+  "meta_title": "Mudanzas en Funes | Fletes & Mudanzas Rosario",
+  "meta_desc": "Empresa de mudanzas Rosario–Funes y dentro de Funes. Mudanzas completas a casas y barrios abiertos, con precio cerrado y equipo propio. 4.7★ en Google.",
+  "lead": "¿Te mudás de Rosario a Funes, o dentro de Funes? Es uno de nuestros recorridos de todas las semanas: conocemos los barrios, los accesos y lo que implica mudar una casa con parque.",
+  "img": "camion-mudanza-700.webp",
+  "alt": "Camión de Fletes & Mudanzas Rosario",
+  "intro2": "Funes creció con familias que dejan el departamento en Rosario por una casa con patio, y esa es exactamente la mudanza que más hacemos: volumen grande, muebles de exterior, parrilla, bicicletas y cajas para una vida más amplia. A 20-25 minutos por autopista, el traslado es corto y el costo lo define el volumen y los accesos, no la distancia.",
+  "bloques": [
+    [
+      "🏠 Casas y barrios abiertos",
+      "Coordinamos el acceso del camión hasta la puerta; en barrios cerrados gestionamos la entrada con la administración."
+    ],
+    [
+      "📦 Mudanzas Rosario → Funes",
+      "La clásica: de depto céntrico a casa. Aprovechamos el viaje para llevar todo en una sola vuelta con el camión grande."
+    ],
+    [
+      "🔁 Funes → Rosario y dentro de Funes",
+      "También hacemos el camino inverso y los cambios de casa dentro de la misma ciudad."
+    ],
+    [
+      "🌳 Muebles de exterior",
+      "Parrillas, mesas de jardín, macetas grandes y herramientas: van protegidos y acomodados junto al resto."
+    ]
+  ],
+  "faqs": [
+    [
+      "¿Cuánto cuesta una mudanza de Rosario a Funes?",
+      "Depende del volumen (ambientes y muebles) y de los accesos en ambos puntos. Al estar a solo 20-25 minutos, la distancia pesa poco: cargá tu inventario en el cotizador online y te pasamos el precio cerrado en el día."
+    ],
+    [
+      "¿Entran a barrios cerrados y countries?",
+      "Sí. Coordinamos el ingreso con la administración del barrio (autorización, seguro y horarios si los exigen) para que el día de la mudanza no haya demoras."
+    ],
+    [
+      "¿Cuánto se tarda?",
+      "Una mudanza típica de un departamento de 2-3 ambientes a una casa en Funes se resuelve en una mañana o una tarde, con carga, viaje y descarga incluidos."
+    ],
+    [
+      "¿Hacen mudanzas dentro de Funes?",
+      "Sí, también mudanzas locales dentro de Funes y hacia localidades vecinas como Roldán."
+    ]
+  ],
+  "area": "Funes, Santa Fe",
+  "related": [
+    [
+      "/mudanzas-roldan.html",
+      "Mudanzas en Roldán",
+      "La ciudad vecina, con barrios nuevos y casas a estrenar."
+    ],
+    [
+      "/blog/como-embalar-para-una-mudanza/",
+      "Cómo embalar para una mudanza",
+      "La guía paso a paso, con electrodomésticos y vajilla."
+    ]
+  ],
+  "kicker": "Mudanzas en Funes",
+  "h1": "Mudanzas en Funes",
+  "schema_name": "Mudanzas en Funes",
+  "local_elements": [
+    "20-25 min por autopista desde Rosario",
+    "barrios cerrados con autorización de ingreso",
+    "casas con parque: muebles de exterior y parrilla"
+  ]
+}

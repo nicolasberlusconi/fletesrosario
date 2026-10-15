@@ -1,0 +1,112 @@
+[
+  {
+    "slug": "cambio-domicilio",
+    "title": "Cambio de domicilio después de mudarte",
+    "requires_data": [],
+    "notes": "Verificar cada requisito en argentina.gob.ar (RENAPER, ANSES, DNRPA) y en santafe.gob.ar. Nunca afirmar costos o plazos sin fuente oficial con fecha.",
+    "primary": "cambio de domicilio",
+    "primary_volume": 4400,
+    "secondary": [
+      "dni cambio de domicilio online",
+      "cambio de domicilio requisitos",
+      "registro civil cambio de domicilio",
+      "requisitos para cambio de domicilio en dni",
+      "cambio de domicilio online",
+      "requisitos para cambiar de domicilio",
+      "tramite cambio de domicilio",
+      "anses cambio de domicilio"
+    ],
+    "total_volume": 9180,
+    "used": false
+  },
+  {
+    "slug": "desinstalar-aire",
+    "title": "Cómo desinstalar un aire acondicionado",
+    "requires_data": [],
+    "notes": "Servicio que Mario ofrece. Explicar el recupero de gas (pump down) con fuente de fabricante y recomendar técnico; no publicar precios sin datos de Mario.",
+    "primary": "como desinstalar aire acondicionado",
+    "primary_volume": 880,
+    "secondary": [
+      "desinstalar aire acondicionado",
+      "como desinstalar un aire acondicionado split",
+      "como se desinstala un aire acondicionado",
+      "cuanto sale desinstalar un aire acondicionado",
+      "como desinstalar aire split",
+      "como desinstalar un aire",
+      "cuanto cuesta desinstalar un aire acondicionado",
+      "desinstalar aire acondicionado precio"
+    ],
+    "total_volume": 1690,
+    "used": false
+  },
+  {
+    "slug": "como-embalar",
+    "title": "Cómo embalar para una mudanza",
+    "requires_data": [],
+    "notes": "",
+    "primary": "como embalar para una mudanza",
+    "primary_volume": 20,
+    "secondary": [
+      "cajas para embalar mudanza",
+      "como embalar muebles para mudanza",
+      "como embalar una heladera para mudanza",
+      "como embalar copas para mudanza",
+      "como embalar platos para mudanza",
+      "como embalar sillas para mudanza",
+      "como embalar vajilla para mudanza"
+    ],
+    "total_volume": 210,
+    "used": true
+  },
+  {
+    "slug": "organizar-mudanza",
+    "title": "Cómo organizar una mudanza",
+    "requires_data": [],
+    "notes": "",
+    "primary": "como organizar una mudanza",
+    "primary_volume": 110,
+    "secondary": [
+      "tips para mudanza"
+    ],
+    "total_volume": 140,
+    "used": false
+  },
+  {
+    "slug": "precio-mudanza",
+    "title": "Cuánto cuesta una mudanza en Rosario",
+    "requires_data": [
+      "precios_reales"
+    ],
+    "notes": "",
+    "primary": "fletes precios",
+    "primary_volume": 260,
+    "secondary": [
+      "fletes y mudanzas precios",
+      "fletes rosario precios",
+      "mudanza precio por hora",
+      "minifletes precios",
+      "precio mudanza",
+      "cuanto sale una mudanza",
+      "mudanzas al interior del pais precios",
+      "mudanzas larga distancia precios"
+    ],
+    "total_volume": 1560,
+    "used": false
+  },
+  {
+    "slug": "guardamuebles",
+    "title": "Guardamuebles",
+    "requires_data": [
+      "servicio_ofrecido"
+    ],
+    "notes": "",
+    "primary": "guardamuebles precio mes",
+    "primary_volume": 210,
+    "secondary": [
+      "guardamuebles precios",
+      "cuanto cuesta un guardamuebles"
+    ],
+    "total_volume": 300,
+    "used": false
+  }
+]

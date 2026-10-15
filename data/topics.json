@@ -1,0 +1,9 @@
+[
+  {"slug": "como-embalar", "title": "Cómo embalar para una mudanza", "pattern": "\\b(embalar|empacar|embalaje)\\b", "prefer": "^como embalar para una mudanza$", "requires_data": []},
+  {"slug": "cambio-domicilio", "title": "Cambio de domicilio después de mudarte", "pattern": "cambio de domicilio|cambiar.*domicilio", "prefer": "^cambio de domicilio$", "exclude": "san juan|san luis|mendoza|cordoba|tucuman|neuquen|salta|chubut|de provincia a capital", "requires_data": [], "notes": "Verificar cada requisito en argentina.gob.ar (RENAPER, ANSES, DNRPA) y en santafe.gob.ar. Nunca afirmar costos o plazos sin fuente oficial con fecha."},
+  {"slug": "desinstalar-aire", "title": "Cómo desinstalar un aire acondicionado", "pattern": "desinstal.*aire|aire.*desinstal", "prefer": "^como desinstalar aire acondicionado$", "requires_data": [], "notes": "Servicio que Mario ofrece. Explicar el recupero de gas (pump down) con fuente de fabricante y recomendar técnico; no publicar precios sin datos de Mario."},
+  {"slug": "organizar-mudanza", "title": "Cómo organizar una mudanza", "pattern": "organizar.*mudanza|tips para (la )?mudanza|checklist|lista para (la )?mudanza|que hacer antes de (una|la) mudanza", "prefer": "^como organizar una mudanza$", "requires_data": []},
+  {"slug": "precio-mudanza", "title": "Cuánto cuesta una mudanza en Rosario", "pattern": "(precio|cuesta|sale|costo|presupuesto).*(mudanza|flete)|(mudanza|flete).*(precio|cuesta|sale|costo|presupuesto)", "requires_data": ["precios_reales"]},
+  {"slug": "guardamuebles", "title": "Guardamuebles", "pattern": "guardamuebles|bauleras?", "requires_data": ["servicio_ofrecido"]},
+  {"slug": "larga-distancia", "title": "Mudanzas de larga distancia", "pattern": "larga distancia|interior del pais|internacional", "requires_data": ["precios_reales"]}
+]

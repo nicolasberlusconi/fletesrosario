@@ -1,0 +1,25 @@
+{
+  "keyword": "como embalar para una mudanza",
+  "fecha": "2026-10-15",
+  "fuente": "google.com.ar, gl=ar, hl=es-419; salteados videos, redes y marketplaces",
+  "serp_features": ["videos", "preguntas relacionadas", "videos cortos"],
+  "people_also_ask": ["¿Qué es lo primero que se empaca en una mudanza?", "¿Qué es lo primero que se carga en una mudanza?", "¿Qué no llevar en una mudanza?", "¿Cómo acomodar las cosas para una mudanza?"],
+  "top3": [
+    {"pos": 1, "url": "https://mudanzaselcid.com/como-empaquetar-para-una-mudanza-en-5-sencillos-pasos/", "pais": "ES", "palabras": 650, "imagenes": 1, "faq": false,
+     "h2": ["Paso 1: empezar 1-3 semanas antes", "Paso 2: cajas y materiales", "Paso 3: cada objeto según sus necesidades", "Paso 4: muebles y pesados con film", "Paso 5: precintar y etiquetar"]},
+    {"pos": 2, "url": "https://trallero.com/embalando-para-una-mudanza-tecnicas-y-estrategias/", "pais": "ES", "palabras": 1700, "imagenes": 1, "faq": false,
+     "h2": ["Planificación inicial", "Técnicas de embalaje", "Estrategias de organización", "Logística del día", "Desembalaje", "Consejos adicionales"]},
+    {"pos": 3, "url": "https://urbanapropiedades.com.ar/blog/tips-para-mudanza-y-embalaje-como-mudarse-de-casa-sin-estres", "pais": "AR", "palabras": 1100, "imagenes": 1, "faq": false,
+     "h2": []}
+  ],
+  "lo_que_cubren_todos": ["materiales", "frágiles", "ropa", "libros", "muebles con film", "etiquetado", "empezar con anticipación"],
+  "lo_que_falta_y_vamos_a_agregar": [
+    "FAQs (ninguno tiene) con schema FAQPage",
+    "Electrodomésticos en detalle: heladera y lavarropas, con fuente del fabricante",
+    "Contexto Rosario: reglas del consorcio, reservar ascensor, dónde para el camión, izamiento si no entra",
+    "Qué NO embalar (garrafas, inflamables, perecederos)",
+    "Cronograma por semanas",
+    "Opinión de la empresa: qué conviene embalar uno y qué dejarle al equipo"
+  ],
+  "objetivo": {"palabras_min": 1400, "imagenes": "2-4", "faqs": "4-8"}
+}

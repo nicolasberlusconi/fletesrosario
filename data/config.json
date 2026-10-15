@@ -1,0 +1,6 @@
+{
+  "max_per_day": 1,
+  "service_cap": 10,
+  "min_volume": 20,
+  "max_kd": 30
+}

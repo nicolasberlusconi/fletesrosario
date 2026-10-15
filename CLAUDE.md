@@ -1,0 +1,47 @@
+# fletesrosario.ar — convenciones del proyecto
+
+Web de **Fletes & Mudanzas Rosario** (negocio de Mario). Objetivo: leads de **mudanzas** en Rosario y zona.
+Producción: https://www.fletesrosario.ar · repo `nicolasberlusconi/fletesrosario` · **push a `main` = deploy** (GitHub Pages, ~1 min). DNS y CDN en Cloudflare.
+
+## Arquitectura (decisión oct-2026)
+- **HTML estático generado con Python, sin framework.** No se migra a Next.js/Vercel: el sitio ya da SEO 100 y hosting $0; un framework agrega peso de JS y riesgo sin ganar posiciones.
+- `index.html` y `cotizador.html` se editan **a mano**.
+- Todo lo demás se **genera**: `python3 scripts/build.py` lee `content/services/*.json` y `content/blog/*.json` y escribe las páginas, `/blog/`, `/servicios/`, `sitemap.xml` y la sección de páginas de `llms.txt`. **Nunca editar a mano un HTML generado**: se pisa en el próximo build.
+- Plantillas en `scripts/templates.py` (CSS, header, footer, GA4, schema). Rutas de assets absolutas (`/img/...`).
+- URLs: servicios en la raíz (`/mudanzas-funes.html`, ya indexadas, no cambiarlas); blog en `/blog/<slug>/`.
+
+## Tracking (no romper)
+- GA4 `G-K1YYD5M4XR` + Google Ads `AW-881512631`, cargados diferido (patrón en `templates.GTAG`).
+- Conversión `lead_mudanza` = `AW-881512631/D-NvCKS-sIAdELehq6QD`: se dispara en clicks a `wa.me` y al enviar el cotizador. Toda página nueva debe incluir `templates.TRACK`.
+
+## Scripts
+| Script | Para qué |
+|---|---|
+| `scripts/keywords.py` | Normaliza `data/keywords-raw.csv` (Google Ads Keyword Planner, AR, español) + `data/semrush-*.csv` si existen; filtra informativas; agrupa por `data/topics.json` → `data/clusters.json` |
+| `scripts/build.py` | Genera páginas, índices, sitemap y llms.txt |
+| `scripts/audit.py` | 1 H1, title ≤60, description ≤155, canonical, JSON-LD válido, imágenes, links rotos, huérfanas, sitemap completo. Sale 1 si hay errores |
+| `scripts/dupcheck.py` | Similitud de texto entre páginas (shingles de 5 palabras). Umbral 60% |
+| `scripts/publish.py blog\|service <slug>` | Puerta de publicación: checklist on-page + build + audit + dupcheck + límite diario + registro en `data/publish-log.json` + marca keywords usadas |
+
+## Reglas de contenido
+- **Nunca inventar datos**: precios, cantidades, clientes, reseñas, plazos. Solo lo que está en `references/stats.md` y `references/stories.md`, o datos de terceros **con fuente citada**. Si falta un dato, el tema no se escribe (por eso `topics.json` tiene `requires_data`).
+- Voz: `references/voice.md` (rioplatense con voseo, directo, concreto). Opiniones reales: `references/opinions.md`.
+- No mencionar la cantidad de reseñas de Google (cambia). Sí "4.7★ en Google".
+- La empresa **no ofrece** embalaje completo ni venta de cajas. Sí: desarme/armado, desinstalación/instalación de lavarropas y aires, izamiento.
+- Sin links pagos ni intercambiados.
+
+## Checklist de un artículo (lo valida `publish.py`)
+Keyword principal en H1, slug, meta title y primeras 100 palabras · meta title ≤60 · description ≤155 · ≥1200 palabras · 3-5 links internos · 2-3 externos de autoridad · 4-8 FAQs (schema FAQPage) · 2-4 imágenes de Pexels con alt, width/height, lazy y crédito · ≥3 keywords secundarias cubiertas · sin TODOs.
+Antes de escribir: análisis de los 3 primeros resultados orgánicos en google.com.ar → `data/serp/<slug>.json`, y agregar al menos 2 cosas que no tengan.
+
+## Páginas de servicio
+- Tope `data/config.json → service_cap` (10). Solo crear una página si tiene ≥3 elementos locales reales (documentarlos en `local_elements`). Si no, se lista y se saltea.
+- No crear páginas de "fletes" chicos: Mario solo quiere mudanzas.
+
+## Límites
+- `data/config.json → max_per_day` (1 publicación por día).
+- Imágenes: `~/.claude/skills/banco-imagenes/scripts/pexels.py`, convertir a WebP 960px (3:2) en `img/blog/`.
+- Lighthouse local no corre en esta Mac (puppeteer no conecta con Chrome): medir con PageSpeed Insights sobre producción.
+
+## Después de publicar
+Commit + push a `main`, esperar el build de Pages, verificar la URL en producción (HTTP 200 + título) y pedir indexación en Search Console (propiedad de dominio `fletesrosario.ar`).

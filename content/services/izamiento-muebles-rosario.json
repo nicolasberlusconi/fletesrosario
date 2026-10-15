@@ -1,0 +1,49 @@
+{
+  "file": "izamiento-muebles-rosario.html",
+  "pagekey": "pagina_izamiento",
+  "order": 1,
+  "meta_title": "Izamiento de Muebles en Rosario | Fletes Rosario",
+  "meta_desc": "Izamiento de muebles por balcón en Rosario: sillones, placares, pianos y heladeras que no pasan por la escalera. Equipo con 20 años de experiencia.",
+  "kicker": "Izamiento en altura",
+  "h1": "Izamiento de muebles en Rosario",
+  "lead": "¿El sillón no pasa por la escalera? ¿El placard no entra en el ascensor? Lo subimos o bajamos por el balcón con sogas, protección y un equipo que lo hace todas las semanas.",
+  "img": "g-izamiento-700.webp",
+  "alt": "Izamiento de un sillón por el balcón en una mudanza en Rosario",
+  "schema_name": "Izamiento de muebles en altura",
+  "area": "Rosario y alrededores",
+  "body_html": "<section>\n    <h2>¿Cuándo se necesita izar un mueble?</h2>\n    <p>Pasa todo el tiempo en Rosario: el sillón de tres cuerpos que no dobla en el palier, el placard que no entra en el ascensor, el piano que jamás va a subir por una escalera caracol. Cuando un mueble no pasa por adentro del edificio, la solución es <b>izarlo por el balcón o la ventana</b> con sogas y personal especializado.</p>\n    <p>Es nuestra especialidad hace más de 20 años: lo hacemos como parte de una mudanza completa o como servicio suelto (por ejemplo, para un mueble recién comprado que el vendedor no te sube).</p>\n    <div class=\"cards\">\n      <div class=\"card\"><h3>🛋️ Sillones y sofás</h3><p>El caso más común: esquineros y sillones de 3 cuerpos que no doblan en escaleras angostas.</p></div>\n      <div class=\"card\"><h3>🚪 Placares y muebles grandes</h3><p>Roperos, modulares, bibliotecas y mesas que superan el tamaño del ascensor.</p></div>\n      <div class=\"card\"><h3>🎹 Pianos y objetos pesados</h3><p>Pianos verticales, cajas fuertes y máquinas: peso y valor que exigen equipo y experiencia.</p></div>\n      <div class=\"card\"><h3>🧊 Heladeras y electrodomésticos</h3><p>Heladeras side by side, lavarropas y freezers que no pasan por pasillos internos.</p></div>\n    </div>\n  </section>\n  <section>\n    <h2>Cómo trabajamos</h2>\n    <ul class=\"checks\">\n      <li><b>Evaluación previa:</b> con fotos por WhatsApp te confirmamos si hace falta izar y por dónde conviene.</li>\n      <li><b>Personal especializado:</b> el equipo asegura el mueble con sogas y protecciones; nadie improvisa.</li>\n      <li><b>Protección total:</b> embalamos el mueble antes de izarlo para que no sufra un rasguño.</li>\n      <li><b>Coordinación con el edificio:</b> si el consorcio exige seguro u horarios, lo resolvemos antes del día.</li>\n    </ul>\n  </section>",
+  "faqs": [
+    [
+      "¿Cuánto cuesta izar un mueble en Rosario?",
+      "Depende del piso, el peso del mueble y el acceso (balcón, ventana, terraza). Mandanos una foto del mueble y decinos el piso por WhatsApp y te pasamos el precio en el día, sin visita previa en la mayoría de los casos."
+    ],
+    [
+      "¿Hasta qué piso pueden izar?",
+      "Con sogas y personal trabajamos los pisos bajos y medios (hasta un 4º-5º piso según el edificio y el peso). Para alturas mayores o muebles muy pesados evaluamos el caso y te decimos con honestidad si conviene otra alternativa."
+    ],
+    [
+      "¿Es seguro? ¿Qué pasa si el mueble se daña?",
+      "Es nuestro trabajo de todos los días: el mueble va embalado, asegurado con sogas y guiado desde arriba y desde abajo. Trabajamos con el cuidado de que llegue como salió."
+    ],
+    [
+      "¿Hacen solo el izamiento, sin mudanza?",
+      "Sí. Muchos clientes nos llaman solo para subir o bajar un mueble puntual, por ejemplo un sillón recién comprado. Cotizalo igual que una mudanza, por WhatsApp o en el cotizador."
+    ],
+    [
+      "¿Pueden izar un piano?",
+      "Sí, izamos pianos verticales con equipo y personal acostumbrado a su peso y fragilidad. Contanos el modelo aproximado y el piso, y te armamos el operativo."
+    ]
+  ],
+  "related": [
+    [
+      "/blog/como-embalar-para-una-mudanza/",
+      "Cómo embalar para una mudanza",
+      "La guía paso a paso, con electrodomésticos y vajilla."
+    ],
+    [
+      "/cotizador.html",
+      "Cotizador online",
+      "Cargá tu inventario y recibí el presupuesto por WhatsApp."
+    ]
+  ]
+}
