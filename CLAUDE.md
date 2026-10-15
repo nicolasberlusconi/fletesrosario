@@ -11,7 +11,8 @@ Producción: https://www.fletesrosario.ar · repo `nicolasberlusconi/fletesrosar
 - URLs: servicios en la raíz (`/mudanzas-funes.html`, ya indexadas, no cambiarlas); blog en `/blog/<slug>/`.
 
 ## Tracking (no romper)
-- GA4 `G-K1YYD5M4XR` + Google Ads `AW-881512631`, cargados diferido (patrón en `templates.GTAG`).
+- GA4 `G-K1YYD5M4XR` + Google Ads `AW-881512631`, cargados diferido: **2 s después del load o al primer toque/tecla** (patrón en `templates.GTAG`, igual en index y cotizador). Cargarlo antes demora el pintado de la foto principal (LCP 5,5 s → 2,9 s al retrasarlo). Las conversiones no se pierden porque el click carga el script.
+- PageSpeed (15-oct-2026): home 95/100/100/100, artículo 95-100/100/100/100, servicio 86/100/100/100. El techo de rendimiento es el bloqueo del script de Google (~300 ms de TBT): no se puede sacar sin perder la medición de conversiones.
 - Conversión `lead_mudanza` = `AW-881512631/D-NvCKS-sIAdELehq6QD`: se dispara en clicks a `wa.me` y al enviar el cotizador. Toda página nueva debe incluir `templates.TRACK`.
 
 ## Scripts
