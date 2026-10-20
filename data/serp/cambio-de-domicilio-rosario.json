@@ -1,0 +1,25 @@
+{
+  "keyword": "cambio de domicilio",
+  "fecha": "2026-10-20",
+  "fuente": "google.com.ar devolvió CAPTCHA (no se resuelve); se usó Bing mkt=es-AR como sustituto. Salteados videos, redes y marketplaces",
+  "serp_features": ["resultados oficiales (gob.ar) dominan"],
+  "people_also_ask": ["¿Cuánto cuesta el cambio de domicilio en el DNI?", "¿Hace falta comprobante de domicilio?", "¿Puedo hacer el cambio de domicilio sin turno?", "¿Cuánto tarda en llegar el nuevo DNI?"],
+  "top3": [
+    {"pos": 1, "url": "https://turnosytramites.com/tramites/como-hacer-cambio-de-domicilio-dni/", "pais": "AR", "palabras": 1200, "imagenes": 0, "faq": true,
+     "h2": ["Lo que no hace falta llevar", "Según tu caso", "Cuándo se paga", "Sobre el padrón electoral", "Problemas y soluciones", "Paso a paso", "Preguntas frecuentes"]},
+    {"pos": 2, "url": "https://buenosaires.gob.ar/tramites/dni-cambio-de-domicilio", "pais": "AR", "palabras": 900, "imagenes": 0, "faq": false,
+     "h2": ["Requisitos para iniciar el trámite", "Pasos para completar el trámite", "Costos del trámite", "Encontrá la oficina más cercana"]},
+    {"pos": 3, "url": "https://www.argentina.gob.ar/servicio/tramitar-un-nuevo-ejemplar-de-dni", "pais": "AR", "palabras": 450, "imagenes": 0, "faq": false,
+     "h2": ["¿Qué necesito?", "¿Cómo hago?", "¿Cuánto tiempo lleva?", "¿Cuál es el costo?", "Vigencia"]}
+  ],
+  "lo_que_cubren_todos": ["requisitos del DNI", "turno", "costo", "entrega por correo"],
+  "lo_que_falta_y_vamos_a_agregar": [
+    "Contexto Santa Fe/Rosario: los 6 Centros Municipales de Distrito con turno, y que en Funes, Roldán o San Lorenzo es sin turno (ficha santafe.gob.ar)",
+    "Cuándo hacerlo en relación a la mudanza (el DNI llega por correo al domicilio nuevo)",
+    "Plazo legal de 30 días y efecto electoral del domicilio (Ley 17.671)",
+    "ANSES y lista de a quién más avisar",
+    "Imágenes y FAQs con schema",
+    "Reseña real y forma de trabajo del equipo"
+  ],
+  "objetivo": {"palabras_min": 1300, "imagenes": "3", "faqs": "6-7"}
+}
