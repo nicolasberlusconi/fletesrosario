@@ -1,7 +1,9 @@
 # fletesrosario.ar — convenciones del proyecto
 
 Web de **Fletes & Mudanzas Rosario** (negocio de Mario). Objetivo: leads de **mudanzas** en Rosario y zona.
-Producción: https://www.fletesrosario.ar · repo `nicolasberlusconi/fletesrosario` · **push a `main` = deploy** (GitHub Pages, ~1 min). DNS y CDN en Cloudflare.
+Producción: https://www.fletesrosario.ar · repo `nicolasberlusconi/fletesrosario` · **push a `main` = deploy** (GitHub Pages, ~1 min). DNS y CDN en Cloudflare (cuenta nicolasberlusconi@gmail.com; la cuenta fletesmudanzasrosario@gmail.com está vacía).
+
+**SSL de Cloudflare en "Full" (no strict), a propósito (27-oct-2026).** GitHub Pages no puede renovar su certificado Let's Encrypt con Cloudflare en modo proxy (queda en `bad_authz`); el 27-oct venció y con "Full (strict)" la web dio error 526 hasta pasar a "Full". No volver a "Full (strict)" sin antes tener un certificado válido en GitHub (`gh api repos/nicolasberlusconi/fletesrosario/pages --jq .https_certificate`).
 
 ## Arquitectura (decisión oct-2026)
 - **HTML estático generado con Python, sin framework.** No se migra a Next.js/Vercel: el sitio ya da SEO 100 y hosting $0; un framework agrega peso de JS y riesgo sin ganar posiciones.
