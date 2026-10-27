@@ -1,0 +1,31 @@
+{
+  "keyword": "como desinstalar aire acondicionado",
+  "fecha": "2026-10-27",
+  "fuente": "google.com.ar, gl=ar, hl=es-419; salteados videos (YouTube), redes (TikTok, Instagram, Facebook) y la Visión general creada por IA",
+  "serp_features": ["videos", "preguntas relacionadas", "visión general creada por IA", "videos cortos", "también se buscó"],
+  "people_also_ask": ["¿Cómo desactivar un aire acondicionado?", "¿Cuánto cobran por desinstalar un aire acondicionado?", "¿Cómo quitar un equipo de aire acondicionado?", "¿Cómo desinstalar el clima?"],
+  "tambien_se_busco": ["sin perder el gas", "sin manómetro", "Samsung", "R32", "desmontar unidad interior", "de ventana", "para limpiar", "unidad exterior"],
+  "top3": [
+    {"pos": 1, "url": "https://www.idealista.com/news/finanzas/hogar/2025/06/21/845835-como-desmontar-un-aire-acondicionado-y-cuanto-cuesta-hacerlo", "pais": "ES", "palabras": 750, "imagenes": 1, "faq": false,
+     "h2": ["¿Cómo desmontar un aire acondicionado paso a paso?", "¿Cómo desmontar un aire acondicionado sin perder el gas?", "¿Cuánto cuesta quitar el aire acondicionado?", "Consejos para desinstalar un aire acondicionado", "¿Por qué desinstalar el aire acondicionado?"],
+     "notas": "Tabla de precios en euros (España). Recomienda experto certificado. Pasos del pump down sin tiempos ni fuente."},
+    {"pos": 2, "url": "https://blog.naldo.com.ar/como-desinstalar-un-aire-acondicionado/", "pais": "AR", "palabras": null, "imagenes": null, "faq": null,
+     "h2": [],
+     "notas": "Bloqueado por Wordfence (HTTP 503, 'access from your area has been temporarily limited') desde navegador y WebFetch el 27/10/2026. Solo se pudo leer el snippet de Google: 'Desconexión de la unidad: identificar conexiones de refrigeración, marcar cables y conexiones para facilitar una futura...'. Es un retailer argentino: foco en vender equipo nuevo, no en mudanza."},
+    {"pos": 3, "url": "https://www.homeserve.es/blog/2020/07/09/como-desmontar-aire-acondicionado", "pais": "ES", "palabras": 800, "imagenes": 1, "faq": false,
+     "h2": ["Cómo desmontar un aire acondicionado sin perder el gas", "Cómo desmontar la unidad exterior", "Cómo desmontar un split", "Cómo desmontar la turbina del aire acondicionado"],
+     "notas": "De 2020. Explica el cierre de válvulas (alta/fina primero, baja/gruesa después) y dice que 'puede durar entre 30 segundos y un minuto'. Nada de seguridad eléctrica ni refrigerantes inflamables. Vende su seguro Home Frío y Calor."}
+  ],
+  "lo_que_cubren_todos": ["cortar la corriente", "recuperar el gas en la unidad exterior (modo frío, cerrar válvula fina y después la gruesa)", "desconectar caños, cables y desagüe", "desmontar unidad interior y exterior", "recomendación de llamar a un técnico"],
+  "lo_que_falta_y_vamos_a_agregar": [
+    "Contexto de mudanza: cuándo desinstalar, cómo viaja el equipo en el camión, qué pasa en destino (reinstalación con vacío)",
+    "Contexto Rosario: unidad exterior en fachada o balcón de un edificio, aviso al consorcio, altura e izamiento",
+    "Fuente de fabricante (manual Daikin R32 en español, 2026): operación de vaciado al cambiar de lugar, no desmontar uno mismo, R32 ligeramente inflamable, cortar la luz y esperar",
+    "Normativa y capacitación en Argentina con fuentes oficiales: Programa Ozono (argentina.gob.ar) y curso de la UTN Rosario sobre refrigerantes inflamables",
+    "FAQs con schema FAQPage (ninguno de los 3 tiene)",
+    "Opinión de la empresa: la desinstalación y reinstalación del aire se pide junto con la mudanza, sin precios publicados",
+    "Reseña real de Google (Cintia A.)",
+    "Equipos de ventana en dos líneas (búsqueda relacionada)"
+  ],
+  "objetivo": {"palabras_min": 1400, "imagenes": "3", "faqs": "6"}
+}
