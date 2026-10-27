@@ -88,6 +88,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.95);backdro
 .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--blue-l);background:#fff}
 .field textarea{resize:vertical;min-height:70px}
 .hint{font-size:12px;color:var(--mut);margin-top:4px}
+.note-foto{background:#fff8e6;border:1.5px solid #f3d58a;border-radius:12px;padding:11px 13px;font-size:13.5px;color:var(--ink);margin:-4px 0 14px}
 .req{color:var(--red)}
 
 /* Chips (selección única) */
@@ -301,6 +302,7 @@ input.bad,label.bad,.datebox.bad{outline:2px solid var(--red);outline-offset:1px
         <label for="f-tel">Un teléfono de contacto (opcional)</label>
         <input type="tel" id="f-tel" autocomplete="tel" placeholder="Por si escribís desde otro WhatsApp">
       </div>
+      <div class="note-foto" id="fotos-final" style="display:none">📸 Al abrirse WhatsApp, enviá el mensaje y <b>después mandá las fotos del balcón y del frente del edificio</b>: sin eso no podemos cotizar el izamiento.</div>
       <label class="opt" id="f-ok-wrap">
         <input type="checkbox" id="f-ok">
         <span><b>Los datos del resumen son correctos</b><small>El presupuesto final se arma con esta información</small></span>
@@ -385,10 +387,8 @@ var CAT = {
 };
 
 var CONDS = [
-  ['iza','Hay muebles que no pasan por escalera ni ascensor','Posible izamiento por balcón — lo hacemos nosotros'],
   ['pesado','Objetos muy pesados (más de 80 kg)','Piano, caja fuerte, máquinas…'],
   ['fragil','Objetos frágiles o de mucho valor','Cristalería, obras, instrumentos…'],
-  ['escalera','Escalera angosta o caracol',''],
   ['calle','Calle angosta, cortada o de difícil acceso para el camión',''],
   ['consorcio','El edificio tiene horarios o reglas para mudanzas','Consorcio, seguro del edificio…']
 ];
@@ -405,14 +405,14 @@ var SERVS = [
 /* ========== ESTADO ========== */
 var S = {
   step: 0,
-  o: {zona:'', dir:'', tipo:'', piso:'', asc:'', entran:'', dist:''},
-  d: {zona:'', dir:'', tipo:'', piso:'', asc:'', entran:'', dist:''},
+  o: {zona:'', dir:'', tipo:'', piso:'', asc:'', alta:'', escal:'', entran:'', cuales:'', salida:'', dist:''},
+  d: {zona:'', dir:'', tipo:'', piso:'', asc:'', alta:'', escal:'', entran:'', cuales:'', salida:'', dist:''},
   fecha:'', franja:'Indistinto', flex:false,
   inv:{}, custom:[], vis:{}, invOk:false,
   modo:'equipo', conds:{}, servs:{}, obs:'',
   nombre:'', tel:''
 };
-try { var saved = localStorage.getItem('cotizador_v1'); if (saved) { var p = JSON.parse(saved); if (p && p.o) S = Object.assign(S, p, {step: Math.min(p.step||0, 5)}); } } catch(e){}
+try { var saved = localStorage.getItem('cotizador_v1'); if (saved) { var p = JSON.parse(saved); if (p && p.o) S = Object.assign(S, p, {step: Math.min(p.step||0, 5)}); ['o','d'].forEach(function(w){ if (S[w].entran==='Sí') S[w].entran='Sí, todos'; }); } } catch(e){}
 function save(){ try { localStorage.setItem('cotizador_v1', JSON.stringify(S)); } catch(e){} }
 
 /* ========== HELPERS ========== */
@@ -421,22 +421,51 @@ function esc(s){ var d=document.createElement('div'); d.textContent=s; return d.
 var ITEMS = {}; Object.keys(CAT).forEach(function(amb){ CAT[amb].forEach(function(it){ ITEMS[it[0]] = {n:it[1], e:it[2], v:it[3], amb:amb}; }); });
 
 /* ========== FORMULARIO ORIGEN/DESTINO ========== */
+function chips(a,k,vals){
+  return vals.map(function(v){ return '<button type="button" class="chip'+(a[k]===v?' on':'')+'" data-k="'+k+'" data-v="'+v+'">'+v+'</button>'; }).join('');
+}
+function isDeptoish(a){ return a.tipo==='Departamento'||a.tipo==='PH'||a.tipo==='Oficina o comercio'; }
+/* Por dónde pasan los muebles grandes en este lugar: 'ascensor', 'escalera' o '' (no aplica) */
+function via(a){
+  if (isDeptoish(a)) return a.asc==='Sí' ? 'ascensor' : (a.asc ? 'escalera' : '');
+  if (a.tipo==='Casa' && a.alta==='Sí') return 'escalera';
+  return '';
+}
+var SALIDA = ['Por escalera','Con sogas por balcón o ventana','No sé, que lo evalúen'];
+function needsPhotos(a){ return via(a) && a.entran==='Algunos no' && a.salida && a.salida!=='Por escalera'; }
 function dirForm(which){
-  var a = S[which], pfx = which;
+  var a = S[which];
   var zonaOpts = '<option value="">Elegí el barrio o la localidad…</option>' + ZONAS.map(function(z){ return '<option'+(a.zona===z?' selected':'')+'>'+z+'</option>'; }).join('');
-  var tipoChips = TIPOS.map(function(t){ return '<button type="button" class="chip'+(a.tipo===t?' on':'')+'" data-k="tipo" data-v="'+t+'">'+t+'</button>'; }).join('');
-  var deptoish = (a.tipo==='Departamento'||a.tipo==='PH'||a.tipo==='Oficina o comercio');
-  var ascChips = ['Sí','No','No sé'].map(function(v){ return '<button type="button" class="chip'+(a.asc===v?' on':'')+'" data-k="asc" data-v="'+v+'">'+v+'</button>'; }).join('');
-  var entChips = ['Sí','Algunos no','No sé'].map(function(v){ return '<button type="button" class="chip'+(a.entran===v?' on':'')+'" data-k="entran" data-v="'+v+'">'+v+'</button>'; }).join('');
-  var distChips = DIST.map(function(v){ return '<button type="button" class="chip'+(a.dist===v?' on':'')+'" data-k="dist" data-v="'+v+'">'+v+'</button>'; }).join('');
-  return ''
+  var deptoish = isDeptoish(a), v = via(a);
+  var lugar = which==='o' ? 'del lugar actual' : 'del lugar nuevo';
+  var h = ''
   + '<div class="field" data-f="zona"><label>Barrio o localidad <span class="req">*</span></label><select data-k="zona">'+zonaOpts+'</select></div>'
   + '<div class="field"><label>Dirección (calle y altura — opcional)</label><input type="text" data-k="dir" value="'+esc(a.dir)+'" placeholder="Ej: Córdoba 1300"><div class="hint">Si preferís, la pasás después por WhatsApp.</div></div>'
-  + '<div class="field" data-f="tipo"><label>Tipo de lugar <span class="req">*</span></label><div class="chips">'+tipoChips+'</div></div>'
-  + (deptoish ? '<div class="field" data-f="piso"><label>Piso <span class="req">*</span></label><input type="text" data-k="piso" value="'+esc(a.piso)+'" placeholder="Ej: PB, 3, 11…" style="max-width:140px"></div>'
-  + '<div class="field" data-f="asc"><label>¿Hay ascensor? <span class="req">*</span></label><div class="chips">'+ascChips+'</div></div>'
-  + (a.asc==='Sí' ? '<div class="field" data-f="entran"><label>¿Entran los muebles grandes en el ascensor? <span class="req">*</span></label><div class="chips">'+entChips+'</div></div>' : '') : '')
-  + '<div class="field" data-f="dist"><label>¿A qué distancia de la entrada puede parar el camión? <span class="req">*</span></label><div class="chips">'+distChips+'</div></div>';
+  + '<div class="field" data-f="tipo"><label>Tipo de lugar <span class="req">*</span></label><div class="chips">'+chips(a,'tipo',TIPOS)+'</div></div>';
+  if (deptoish) {
+    h += '<div class="field" data-f="piso"><label>Piso <span class="req">*</span></label><input type="text" data-k="piso" value="'+esc(a.piso)+'" placeholder="Ej: PB, 3, 11…" style="max-width:140px"></div>'
+      + '<div class="field" data-f="asc"><label>¿Hay ascensor? <span class="req">*</span></label><div class="chips">'+chips(a,'asc',['Sí','No','No sé'])+'</div>'
+      + (which==='d' ? '<div class="hint">¿Todavía no fuiste? Preguntale al portero o a la inmobiliaria: el ascensor y la escalera son lo que más cambia el presupuesto.</div>' : '') + '</div>';
+  }
+  if (a.tipo==='Casa') {
+    h += '<div class="field" data-f="alta"><label>¿Hay muebles en planta alta? <span class="req">*</span></label><div class="chips">'+chips(a,'alta',['No','Sí'])+'</div></div>';
+  }
+  if (v==='escalera') {
+    h += '<div class="field" data-f="escal"><label>¿Cómo es la escalera? <span class="req">*</span></label><div class="chips">'+chips(a,'escal',['Común','Angosta','Caracol','No sé'])+'</div></div>';
+  }
+  if (v) {
+    h += '<div class="field" data-f="entran"><label>¿Los muebles grandes '+(v==='ascensor'?'entran en el ascensor':'pasan por la escalera')+'? <span class="req">*</span></label><div class="chips">'+chips(a,'entran',['Sí, todos','Algunos no','No sé'])+'</div></div>';
+    if (a.entran==='Algunos no') {
+      h += '<div class="field" data-f="cuales"><label>¿Cuáles no '+(v==='ascensor'?'entran':'pasan')+'? <span class="req">*</span></label><input type="text" data-k="cuales" value="'+esc(a.cuales||'')+'" placeholder="Ej: sillón de 3 cuerpos, placard de 2 m, heladera"><div class="hint">Nombralos uno por uno: con eso sabemos cuánta gente y qué equipo llevar.</div></div>'
+        + '<div class="field" data-f="salida"><label>¿Cómo hay que '+(which==='o'?'bajarlos':'subirlos')+'? <span class="req">*</span></label><div class="chips">'+chips(a,'salida',SALIDA)+'</div></div>';
+      if (needsPhotos(a)) h += '<div class="note-foto">📸 Para izar con sogas necesitamos ver el lugar: <b>después de enviar, mandanos por WhatsApp una foto del balcón (o la ventana) y otra del frente del edificio</b>.</div>';
+    }
+    if (a.entran==='No sé') {
+      h += '<div class="field"><label>¿Qué muebles te preocupan? (opcional)</label><input type="text" data-k="cuales" value="'+esc(a.cuales||'')+'" placeholder="Ej: el sillón y el placard"><div class="hint">Si podés, medí el ascensor o la escalera '+lugar+' y mandanos una foto por WhatsApp.</div></div>';
+    }
+  }
+  h += '<div class="field" data-f="dist"><label>¿A qué distancia de la entrada puede parar el camión? <span class="req">*</span></label><div class="chips">'+chips(a,'dist',DIST)+'</div></div>';
+  return h;
 }
 function bindDirForm(which){
   var cont = $(which==='o'?'formO':'formD');
@@ -447,7 +476,10 @@ function bindDirForm(which){
       el.addEventListener(el.tagName==='SELECT'?'change':'input', function(){ S[which][k] = el.value; save(); });
     } else {
       el.addEventListener('click', function(){
-        S[which][k] = el.getAttribute('data-v'); save();
+        var nv = el.getAttribute('data-v'), a = S[which];
+        if ((k==='tipo'||k==='asc'||k==='alta') && a[k]!==nv) { a.entran=''; a.cuales=''; a.salida=''; if (k==='tipo') a.escal=''; }
+        if (k==='entran' && a[k]!==nv) { a.salida=''; }
+        a[k] = nv; save();
         bindDirForm(which); // re-render para chips y campos condicionales
       });
     }
@@ -544,12 +576,23 @@ function lugarLinea(a){
   if (a.tipo) {
     var t=a.tipo;
     if (a.piso) t += ' · piso '+a.piso;
-    if (a.tipo==='Departamento'||a.tipo==='PH'||a.tipo==='Oficina o comercio'){
-      if (a.asc==='Sí') t += ' · con ascensor' + (a.entran==='Algunos no' ? ' (muebles grandes NO entran)' : a.entran==='No sé' ? ' (no sabe si entran los muebles)' : '');
+    if (isDeptoish(a)){
+      if (a.asc==='Sí') t += ' · con ascensor';
       if (a.asc==='No') t += ' · SIN ascensor';
       if (a.asc==='No sé') t += ' · no sabe si hay ascensor';
     }
+    if (a.tipo==='Casa' && a.alta==='Sí') t += ' · con planta alta';
+    if (via(a)==='escalera' && a.escal) t += ' · escalera ' + (a.escal==='No sé' ? '(no sabe cómo es)' : a.escal.toLowerCase());
     parts.push(t);
+    var v = via(a);
+    if (v && a.entran==='Sí, todos') parts.push('muebles grandes: entran todos por ' + v);
+    if (v && a.entran==='Algunos no') {
+      parts.push('⚠️ NO ' + (v==='ascensor'?'entran en el ascensor':'pasan por la escalera') + ': ' + (a.cuales||'-'));
+      if (a.salida==='Por escalera') parts.push('   → bajarlos/subirlos por escalera');
+      if (a.salida==='Con sogas por balcón o ventana') parts.push('   → IZAR CON SOGAS (mando fotos del balcón y del frente)');
+      if (a.salida==='No sé, que lo evalúen') parts.push('   → no sabe cómo: que lo evalúen (mando fotos del balcón y del frente)');
+    }
+    if (v && a.entran==='No sé') parts.push('no sabe si entran los muebles grandes' + (a.cuales ? ' (le preocupan: '+a.cuales+')' : ''));
   }
   parts.push(a.zona + (a.dir ? ' — '+a.dir : ''));
   if (a.dist) parts.push('camión: '+a.dist.toLowerCase());
@@ -585,6 +628,7 @@ function buildMsg(){
   var sv = SERVS.filter(function(s){ return S.servs[s[0]]; }).map(function(s){ return s[1]; });
   if (sv.length) { L.push(''); L.push('🛠️ *SERVICIOS PEDIDOS:*'); sv.forEach(function(s){ L.push('• ' + s); }); }
   if (S.obs) { L.push(''); L.push('💬 *Comentarios:* ' + S.obs); }
+  if (needsPhotos(S.o) || needsPhotos(S.d)) { L.push(''); L.push('📸 A continuación les mando las fotos del balcón y del frente del edificio.'); }
   L.push('');
   L.push('¿Me pasan el presupuesto? ¡Gracias!');
   return L.join('\n');
@@ -623,10 +667,14 @@ function valid(step){
     var cont = step===0 ? '#formO' : '#formD';
     if (!a.zona) { markBad(cont+' [data-f=zona]'); return 'Elegí el barrio o la localidad.'; }
     if (!a.tipo) { markBad(cont+' [data-f=tipo]'); return 'Elegí el tipo de lugar (casa, departamento…).'; }
-    var deptoish = (a.tipo==='Departamento'||a.tipo==='PH'||a.tipo==='Oficina o comercio');
+    var deptoish = isDeptoish(a), v = via(a);
     if (deptoish && !a.piso.trim()) { markBad(cont+' [data-f=piso]'); return 'Decinos el piso (poné PB si es planta baja).'; }
     if (deptoish && !a.asc) { markBad(cont+' [data-f=asc]'); return 'Decinos si hay ascensor — cambia el presupuesto.'; }
-    if (deptoish && a.asc==='Sí' && !a.entran) { markBad(cont+' [data-f=entran]'); return 'Decinos si los muebles grandes entran en el ascensor.'; }
+    if (a.tipo==='Casa' && !a.alta) { markBad(cont+' [data-f=alta]'); return 'Decinos si hay muebles en planta alta.'; }
+    if (v==='escalera' && !a.escal) { markBad(cont+' [data-f=escal]'); return 'Decinos cómo es la escalera (común, angosta o caracol).'; }
+    if (v && !a.entran) { markBad(cont+' [data-f=entran]'); return v==='ascensor' ? 'Decinos si los muebles grandes entran en el ascensor.' : 'Decinos si los muebles grandes pasan por la escalera.'; }
+    if (v && a.entran==='Algunos no' && !(a.cuales||'').trim()) { markBad(cont+' [data-f=cuales]'); return 'Contanos qué muebles no entran: así llevamos la gente y el equipo justos.'; }
+    if (v && a.entran==='Algunos no' && !a.salida) { markBad(cont+' [data-f=salida]'); return 'Decinos cómo hay que sacarlos: por escalera o con sogas.'; }
     if (!a.dist) { markBad(cont+' [data-f=dist]'); return 'Marcá a qué distancia puede parar el camión.'; }
   }
   if (step===2) {
@@ -648,7 +696,7 @@ function go(n){
   $('btnNext').style.display = n<5 ? '' : 'none';
   $('btnSend').style.display = n===5 ? '' : 'none';
   $('err').classList.remove('on');
-  if (n===5) renderResumen();
+  if (n===5) { renderResumen(); $('fotos-final').style.display = (needsPhotos(S.o)||needsPhotos(S.d)) ? '' : 'none'; }
   window.scrollTo({top:0, behavior:'smooth'});
   if (typeof gtag==='function') gtag('event','cotizador_full_paso',{ paso:n+1, nombre_paso:LABELS[n] });
 }
