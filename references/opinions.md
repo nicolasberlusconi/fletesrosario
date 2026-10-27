@@ -9,6 +9,7 @@
 
 - **No hay lista de precios**: cada mudanza tiene sus particularidades y se cotiza a medida, con el inventario y los accesos. Desconfiar de quien da un precio sin saber qué hay que mudar. (Confirmado por Nico, 15-oct-2026)
 - **No se ofrece guardamuebles.**
+- **Desinstalación e instalación de aire acondicionado: se cotiza según dificultad** (ubicación de la unidad en la casa vieja y en la nueva, tamaño del equipo, etc.), dentro del presupuesto de la mudanza. No va "incluida" ni es gratis. (Nico, 27-oct-2026)
 
 ## TODO — necesito de Mario
 - TODO: ¿qué es lo que más ve que la gente hace mal al embalar?

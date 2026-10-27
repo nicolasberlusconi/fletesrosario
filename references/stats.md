@@ -7,6 +7,7 @@
 | Flota desde 600 kg (utilitario) hasta semis de 14 m y 25 t | Web original |
 | Transporte refrigerado hasta 2 °C | Web original |
 | Funes a 20-25 min, Roldán ~30 min, San Lorenzo 30-40 min por autopista | Tiempos de viaje aproximados por ruta |
+| El técnico que desinstala e instala aires en las mudanzas está capacitado en buenas prácticas de manejo de refrigerantes (curso / certificación: Nico respondió "sí", falta precisar cuál) | Nico, 27-oct-2026 |
 
 ## Datos técnicos de terceros (citar siempre la fuente)
 - Heladera: esperar 4–6 h si viajó parada, 12–24 h si viajó acostada, 24 h si no se sabe. Fuente: Haier (haier-europe.com/es_ES/blogs/news/enchufar-nevera-nueva). El manual del modelo manda.

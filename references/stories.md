@@ -15,9 +15,11 @@
 | Bruno D. P. | "Puntualidad! Mucho profesionalismo y dedicación. Tuve que traer un mueble muy delicado y salió todo perfecto!!!" | mueble delicado |
 | David A. | "Muy recomendable, fue mi primera experiencia y el chofer estuvo más que puntual y muy responsable" | primera mudanza, chofer |
 | dreamers turismo y evento | "Excelente servicio! Nelson super profesional. Muchas gracias" | el equipo (Nelson) |
+| Franco M. | "La mudanza salió 10 puntos, los muchachos estuvieron atento a los detalles y fueron delicados con las cosas más frágiles. Para coordinar el traslado y el día fue rápido. Con respecto al precio, es muy accesible para todo lo que brindan." (Google, leída 27-oct-2026) | frágiles, coordinación rápida, precio |
+| Norma B. | "Super responsables y confiables. Ya es la tercera mudanza que hago y siempre puntuales. Los ayudantes son excelentes, acomodan todo rapidísimo y tratan las cosas con cuidado. Super agradecida, los recomiendo siempre." (Google, leída 27-oct-2026) | cliente que repite (3 mudanzas), cuidado |
 | Estación GNC PLUS | "Brindan muy buen servicio. Buena gente. Atenta! 100% recomendables" | trato |
 
-Respuestas del dueño (tono real): "Gracias por todas tus palabras Bernardo" · "Gracias por elegirnos Julieta" · "Gracias Bruno por tantos halagos, no hicimos más que cumplir con lo acordado."
+Respuestas del dueño (tono real): "Muy amable de tu parte franco por tan buena reseña" · "es un gusto seguir brindándote un buen servicio" · "Gracias por todas tus palabras Bernardo" · "Gracias por elegirnos Julieta" · "Gracias Bruno por tantos halagos, no hicimos más que cumplir con lo acordado."
 
 ## Historias armadas desde las reseñas (listas para usar)
 1. **El mueble delicado (Bruno D. P.)** — Bruno tenía que trasladar un mueble muy delicado y le preocupaba que llegara entero. Su reseña lo resume: "salió todo perfecto". Contexto verdadero para sumar: los muebles delicados viajan envueltos en manta y film y se cargan aparte del resto. Y la respuesta del dueño dice mucho de la casa: "no hicimos más que cumplir con lo acordado".
@@ -33,6 +35,9 @@ Respuestas del dueño (tono real): "Gracias por todas tus palabras Bernardo" · 
 
 ## El equipo (nombres que aparecen en reseñas reales)
 Mario (dueño), Sebastián, Nelson. Se pueden mencionar como "el equipo de Sebastián" o "Nelson, uno de nuestros choferes" solo en contextos generales, nunca atribuyéndoles escenas inventadas.
+
+## Casos aprobados por Nico sin nombre de cliente
+- **El aire del contrafrente (27-oct-2026).** Nico pidió sumar al artículo de aires un caso con desinstalación e instalación "con cierta complejidad" que "quedó perfecto". Se buscó en Google (web + ficha de Maps, 27-oct-2026): ninguna reseña visible menciona aires y el buscador de opiniones exige login. Se publicó como "un caso reciente" SIN nombre (regla de arriba: no atribuir hechos a una persona real). Si Nico o Mario identifican al cliente real, se le pone nombre e inicial.
 
 ## Escenas ilustrativas aprobadas (presentar siempre como ejemplo)
 - "Un caso que vemos seguido: el sillón de tres cuerpos que entró nuevo al departamento, pero que a la hora de irse no dobla en el palier. Ahí no se fuerza: se iza por el balcón."
