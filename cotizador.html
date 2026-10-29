@@ -349,7 +349,8 @@ input.bad,label.bad,.datebox.bad{outline:2px solid var(--red);outline-offset:1px
 /* ========== DATOS ========== */
 var WA = '5493413889017';
 
-var ZONAS = ['Rosario Centro','Rosario Norte','Rosario Sur','Rosario Oeste','Pichincha','Fisherton','Echesortu','Arroyito','Alberdi','Abasto','Otra zona de Rosario','Funes','Roldán','Villa G. Gálvez','Granadero Baigorria','Capitán Bermúdez','San Lorenzo','Pérez','Soldini','Ibarlucea','Alvear','Pueblo Esther','Arroyo Seco','Otra localidad / larga distancia'];
+var ZONAS = ['Rosario Centro','Rosario Norte','Rosario Sur','Rosario Oeste','Pichincha','Fisherton','Echesortu','Arroyito','Alberdi','Abasto','Otra zona de Rosario','Funes','Roldán','Villa G. Gálvez','Granadero Baigorria','Capitán Bermúdez','San Lorenzo','Pérez','Soldini','Ibarlucea','Alvear','Pueblo Esther','Arroyo Seco','Otra localidad (la escribís vos)'];
+var OTRA = 'Otra localidad (la escribís vos)';
 var TIPOS = ['Departamento','Casa','PH','Oficina o comercio','Depósito'];
 var DIST = ['En la puerta','A menos de 10 m','Entre 10 y 50 m','A más de 50 m','No sé'];
 
@@ -412,7 +413,7 @@ var S = {
   modo:'equipo', conds:{}, servs:{}, obs:'',
   nombre:'', tel:''
 };
-try { var saved = localStorage.getItem('cotizador_v1'); if (saved) { var p = JSON.parse(saved); if (p && p.o) S = Object.assign(S, p, {step: Math.min(p.step||0, 5)}); ['o','d'].forEach(function(w){ if (S[w].entran==='Sí') S[w].entran='Sí, todos'; }); } } catch(e){}
+try { var saved = localStorage.getItem('cotizador_v1'); if (saved) { var p = JSON.parse(saved); if (p && p.o) S = Object.assign(S, p, {step: Math.min(p.step||0, 5)}); ['o','d'].forEach(function(w){ if (S[w].entran==='Sí') S[w].entran='Sí, todos'; if (S[w].zona==='Otra localidad / larga distancia') S[w].zona=OTRA; }); } } catch(e){}
 function save(){ try { localStorage.setItem('cotizador_v1', JSON.stringify(S)); } catch(e){} }
 
 /* ========== HELPERS ========== */
@@ -440,6 +441,7 @@ function dirForm(which){
   var lugar = which==='o' ? 'del lugar actual' : 'del lugar nuevo';
   var h = ''
   + '<div class="field" data-f="zona"><label>Barrio o localidad <span class="req">*</span></label><select data-k="zona">'+zonaOpts+'</select></div>'
+  + (a.zona===OTRA ? '<div class="field" data-f="loc"><label>¿Qué localidad? <span class="req">*</span></label><input type="text" data-k="loc" value="'+esc(a.loc||'')+'" placeholder="Ej: Timbúes, Villa Constitución, Córdoba capital"><div class="hint">Cualquier localidad de Santa Fe o del país: hacemos mudanzas a todos lados.</div></div>' : '')
   + '<div class="field"><label>Dirección (calle y altura — opcional)</label><input type="text" data-k="dir" value="'+esc(a.dir)+'" placeholder="Ej: Córdoba 1300"><div class="hint">Si preferís, la pasás después por WhatsApp.</div></div>'
   + '<div class="field" data-f="tipo"><label>Tipo de lugar <span class="req">*</span></label><div class="chips">'+chips(a,'tipo',TIPOS)+'</div></div>';
   if (deptoish) {
@@ -473,7 +475,7 @@ function bindDirForm(which){
   cont.querySelectorAll('[data-k]').forEach(function(el){
     var k = el.getAttribute('data-k');
     if (el.tagName==='SELECT' || el.tagName==='INPUT') {
-      el.addEventListener(el.tagName==='SELECT'?'change':'input', function(){ S[which][k] = el.value; save(); });
+      el.addEventListener(el.tagName==='SELECT'?'change':'input', function(){ S[which][k] = el.value; save(); if (el.tagName==='SELECT') bindDirForm(which); });
     } else {
       el.addEventListener('click', function(){
         var nv = el.getAttribute('data-v'), a = S[which];
@@ -594,7 +596,7 @@ function lugarLinea(a){
     }
     if (v && a.entran==='No sé') parts.push('no sabe si entran los muebles grandes' + (a.cuales ? ' (le preocupan: '+a.cuales+')' : ''));
   }
-  parts.push(a.zona + (a.dir ? ' — '+a.dir : ''));
+  parts.push((a.zona===OTRA ? (a.loc||'otra localidad') : a.zona) + (a.dir ? ' — '+a.dir : ''));
   if (a.dist) parts.push('camión: '+a.dist.toLowerCase());
   return parts.join('\n   ');
 }
@@ -666,6 +668,7 @@ function valid(step){
     var a = step===0 ? S.o : S.d;
     var cont = step===0 ? '#formO' : '#formD';
     if (!a.zona) { markBad(cont+' [data-f=zona]'); return 'Elegí el barrio o la localidad.'; }
+    if (a.zona===OTRA && !(a.loc||'').trim()) { markBad(cont+' [data-f=loc]'); return 'Escribí el nombre de la localidad.'; }
     if (!a.tipo) { markBad(cont+' [data-f=tipo]'); return 'Elegí el tipo de lugar (casa, departamento…).'; }
     var deptoish = isDeptoish(a), v = via(a);
     if (deptoish && !a.piso.trim()) { markBad(cont+' [data-f=piso]'); return 'Decinos el piso (poné PB si es planta baja).'; }
