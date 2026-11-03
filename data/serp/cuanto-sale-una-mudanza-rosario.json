@@ -1,0 +1,28 @@
+{
+  "keyword": "cuanto sale una mudanza",
+  "fecha": "2026-11-03",
+  "fuente": "google.com.ar, gl=ar, hl=es-419; salteados Facebook, Reddit y listados de tarifas",
+  "serp_features": ["preguntas relacionadas", "también se buscó"],
+  "people_also_ask": ["¿Cuánto cobra una empresa por una mudanza?", "¿Cuánto se cobra el km de flete en Argentina?", "¿Cuánto se puede cobrar por hacer una mudanza?", "¿Cuántos días te corresponden por ley por mudanza?"],
+  "top3": [
+    {"pos": 1, "url": "https://www.transportesargentinos.com.ar/mudanzas-caba", "pais": "AR (CABA)", "palabras": 900, "imagenes": 1, "faq": true,
+     "h2": ["Todo previsto antes del día del traslado", "Tu mudanza en tres pasos", "Mucho más que trasladar tus cosas", "Mudanzas en todos los barrios de CABA", "¿Cómo se calcula el precio de una mudanza en CABA?", "Antes de organizar tu mudanza en CABA", "Organizá tu mudanza en CABA con anticipación"],
+     "nota": "Página de servicio, no artículo. Lista 6 factores en una línea cada uno."},
+    {"pos": 2, "url": "https://buscoroomie.com.ar/blogPost/gastos-de-mudanza-en-argentina-2026-cuanto-cuesta-que-incluye-y-como-ahorrar", "pais": "AR (CABA)", "palabras": 1770, "imagenes": 1, "faq": true,
+     "h2": ["Desglose completo de gastos de mudanza", "Flete y transporte: cuánto cuesta", "Costos ocultos que nadie te dice", "Gastos de entrada al nuevo departamento", "Checklist de mudanza", "Cómo ahorrar en tu mudanza", "Mudarse a una habitación", "Preguntas frecuentes"],
+     "nota": "Portal de habitaciones compartidas; enfocado en gastos de alquiler, no en el servicio de mudanza."},
+    {"pos": 3, "url": "https://transporteslm.com.ar/blog/cuanto-cuesta-una-mudanza", "pais": "AR", "palabras": 180, "imagenes": 0, "faq": false,
+     "h2": ["Datos necesarios para cotizar una mudanza"],
+     "nota": "Lista de datos para pedir presupuesto, sin desarrollo."}
+  ],
+  "lo_que_cubren_todos": ["volumen/ambientes", "distancia", "pisos y escaleras", "personal de carga", "embalaje"],
+  "lo_que_falta_y_vamos_a_agregar": [
+    "Ninguno es de Rosario: consorcio, ascensor, dónde para el camión en el centro, izamiento por balcón (con fotos para cotizar)",
+    "Por qué el precio por hora o por km traslada el riesgo al cliente y qué conviene preguntar (precio cerrado con inventario)",
+    "Qué tiene que decir un presupuesto por escrito, con el art. 4 y 19 de la Ley 24.240 de Defensa del Consumidor y dónde reclamar",
+    "Checklist para comparar presupuestos de distintas empresas",
+    "Opinión real de la empresa: fecha flexible = mejor precio; mudanza completa vs solo camión",
+    "Reseñas reales que hablan del precio (Bernardo K., Franco M.)"
+  ],
+  "objetivo": {"palabras_min": 1500, "imagenes": "3", "faqs": "6-7"}
+}
