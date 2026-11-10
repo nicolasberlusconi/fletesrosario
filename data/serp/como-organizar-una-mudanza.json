@@ -1,0 +1,27 @@
+{
+  "keyword": "como organizar una mudanza",
+  "fecha": "2026-11-10",
+  "fuente": "google.com.ar, gl=ar, hl=es-419; salteados videos, redes y marketplaces",
+  "serp_features": ["visión general creada por IA", "preguntas relacionadas", "videos", "imágenes", "también se buscó"],
+  "people_also_ask": ["¿Qué se carga primero en una mudanza?", "¿Cómo realizar una mudanza paso a paso?", "¿Cuáles son las cosas indispensables para una mudanza?", "¿Cuáles son los pasos para realizar una mudanza?"],
+  "top3": [
+    {"pos": 1, "url": "https://www.idealista.com/news/inmobiliario/vivienda/2022/12/30/800671-como-organizar-una-mudanza-guia-hacerlo-eficientemente", "pais": "ES", "palabras": 1050, "imagenes": 3, "faq": false,
+     "h2": ["Cómo organizar una mudanza", "Primeros pasos para organizar una mudanza", "¿Cómo hacer una mudanza paso a paso?", "Trucos para organizar bien una mudanza", "¿Cuánto se tarda en organizar una mudanza?"]},
+    {"pos": 2, "url": "https://serveiestacio.com/blog/trucos-mudanza-22-consejos-para-organizar-y-ordenar-tu-casa/", "pais": "ES", "palabras": 1400, "imagenes": 23, "faq": false,
+     "h2": ["22 trucos numerados: preparar con tiempo, medir la casa nueva, limpiar, empaquetar por categorías, descartar, etiquetar, desmontar muebles, frágiles, ropa, cables, horario permitido, transporte, despedirse de la casa"]},
+    {"pos": 3, "url": "https://blog.eidico.com.ar/como-organizar-una-mudanza/", "pais": "AR", "palabras": 1000, "imagenes": 3, "faq": false,
+     "h2": ["¿Cómo planificar?", "6 consejos para una mudanza organizada", "6 imprescindibles para embalar", "Cuidar los electrodomésticos"]}
+  ],
+  "lo_que_cubren_todos": ["empezar con anticipación", "descartar", "embalar por ambiente", "etiquetar cajas", "kit de primera necesidad", "contratar transporte"],
+  "lo_que_falta_y_vamos_a_agregar": [
+    "FAQs (ninguno tiene) con schema FAQPage, respondiendo las 'Más preguntas' de Google (qué se carga primero, cosas indispensables)",
+    "Cronograma concreto por semanas, con qué decidir en cada una",
+    "Consorcio con base legal: el reglamento de PH regula el uso de partes comunes (CCyC arts. 2046 y 2056) — horarios, ascensor, palier",
+    "Plazo legal del cambio de domicilio en el DNI (Ley 17.671 art. 47: 30 días), con link a la guía de Rosario",
+    "Heladera: horas de espera antes de enchufar, con fuente de fabricante (Haier)",
+    "Medir accesos y muebles grandes antes del día, e izamiento por balcón cuando no pasan",
+    "Opinión de la empresa: precio cerrado con inventario y fecha flexible",
+    "Reseñas reales: mudanza resuelta en el día (Cintia A.) y primera mudanza (David A.)"
+  ],
+  "objetivo": {"palabras_min": 1500, "imagenes": "3", "faqs": "6-7"}
+}
