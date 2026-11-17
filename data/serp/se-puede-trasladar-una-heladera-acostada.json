@@ -1,0 +1,28 @@
+{
+  "keyword": "se puede trasladar una heladera acostada",
+  "fecha": "2026-11-17",
+  "fuente": "google.com.ar, gl=ar, hl=es-419 (Chrome); salteados videos, redes, foros y la visión de IA",
+  "serp_features": ["visión general creada por IA", "videos cortos", "más preguntas", "videos", "también se buscó"],
+  "people_also_ask": ["¿Cómo mover un refrigerador acostado?", "¿Cuánto tiempo hay que esperar para enchufar una heladera que estuvo acostada?", "¿Es posible trasladar un refrigerador en posición horizontal?", "¿Se puede inclinar una heladera?"],
+  "top3": [
+    {"pos": 1, "url": "https://www.midea.com/mx/blog/ver-todas/tips/se-puede-acostar-un-refrigerador", "pais": "MX", "palabras": 1400, "imagenes": 2, "faq": true,
+     "h2": ["¿Se puede acostar un refrigerador de lado?", "Riesgos de acostar un refrigerador de lado", "¿Cómo transportar un refrigerador?", "¿Qué debes hacer si debes acostar un refrigerador?", "Errores comunes", "Preguntas frecuentes"],
+     "nota": "Se contradice: el cuerpo dice reposar 4-12 h y la FAQ 12-24 h. Español de México (refrigerador)."},
+    {"pos": 2, "url": "https://cargasxl.com/ar/blog/mudanzas/se-puede-transportar-una-heladera-acostada/", "pais": "AR", "palabras": 1100, "imagenes": 4, "faq": true,
+     "h2": ["¿Se puede o no se puede?", "De qué lado hay que acostarla", "¿Cuánto se puede inclinar?", "Qué pasa si la transportás mal", "¿Cuánto hay que esperar para enchufar?", "Heladera nueva", "Paso a paso", "Que la lleve alguien con experiencia", "Preguntas frecuentes"],
+     "nota": "Marketplace de fletes. Afirma un '90%' de heladeras dañadas por enchufarlas antes sin fuente y publica precio por km. No cita fabricantes."},
+    {"pos": 3, "url": "https://blog.drean.com.ar/cuidados-y-recomendaciones-para-mudar-de-lugar-una-heladera-con-freezer/", "pais": "AR", "palabras": 600, "imagenes": 3, "faq": false,
+     "h2": ["Prepará tu heladera antes del traslado", "Protegé la heladera durante el traslado", "Consejos para instalar tu heladera en su nuevo lugar", "Cómo limpiar heladeras nuevas después de una mudanza"],
+     "nota": "Fabricante argentino: solo dice 'siempre vertical'; no da horas de espera."}
+  ],
+  "lo_que_cubren_todos": ["mejor vertical", "aceite del compresor", "vaciar y desenchufar antes", "sujetar puertas", "esperar antes de enchufar"],
+  "lo_que_falta_y_vamos_a_agregar": [
+    "Tabla comparando lo que dice cada fabricante (Haier, Samsung, Drean) con link a la fuente, en vez de una cifra sin origen",
+    "El problema real en Rosario: escalera, ascensor y palier — dónde se inclina de verdad una heladera en una mudanza",
+    "Medir la heladera contra el ascensor y el izamiento por balcón cuando no pasa",
+    "Por qué en el camión de mudanza viaja parada (y en el auto no)",
+    "Heladera nueva vs. heladera que viene de otra casa",
+    "Reseña real de cliente sobre cuidado de lo frágil y escena ilustrativa aprobada (4º piso sin ascensor, side by side)"
+  ],
+  "objetivo": {"palabras_min": 1400, "imagenes": "3", "faqs": "6-7"}
+}

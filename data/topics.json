@@ -38,5 +38,22 @@
     "exclude": "flete|guardamuebles|internacional|bahia blanca|buenos aires|capital",
     "prefer": "^cuanto sale una mudanza$",
     "notes": "Mario NO tiene lista de precios: cada mudanza se cotiza a medida. PROHIBIDO publicar montos, rangos o precios por hora/km. El artículo explica qué factores definen el precio (volumen/inventario, piso y ascensor, distancia del camión, modalidad equipo vs solo camión, desarme/armado, izamiento, fecha flexible = mejor precio) y por qué conviene un precio cerrado con inventario. CTA al cotizador."
+  },
+  {
+    "slug": "trasladar-heladera",
+    "title": "Cómo trasladar una heladera en una mudanza (¿se puede acostada?)",
+    "pattern": "heladera",
+    "prefer": "^se puede trasladar una heladera acostada$",
+    "exclude": "patrick|whirlpool|samsung|drean|gafa|electrolux|philco|precio|comprar",
+    "requires_data": [],
+    "notes": "Tiempos de espera para enchufar SOLO con fuente de fabricante (Haier ya verificada en references/stats.md; sumar otra marca si se verifica). Aclarar que manda el manual del modelo. No prometer que una heladera acostada no se rompe."
+  },
+  {
+    "slug": "mudanza-mascotas",
+    "title": "Mudarse con gatos y perros",
+    "pattern": "gato|perro|mascota",
+    "prefer": "^mudanza con gatos$",
+    "requires_data": [],
+    "notes": "Consejos de manejo solo con fuente veterinaria o de organismo (ej. SENASA para viajes, colegios veterinarios). Nada de medicación sin indicar que la receta el veterinario. Contexto Rosario: el día de la mudanza los animales lejos de la puerta abierta."
   }
 ]

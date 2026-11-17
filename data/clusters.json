@@ -20,6 +20,26 @@
     "used": true
   },
   {
+    "slug": "trasladar-heladera",
+    "title": "Cómo trasladar una heladera en una mudanza (¿se puede acostada?)",
+    "requires_data": [],
+    "notes": "Tiempos de espera para enchufar SOLO con fuente de fabricante (Haier ya verificada en references/stats.md; sumar otra marca si se verifica). Aclarar que manda el manual del modelo. No prometer que una heladera acostada no se rompe.",
+    "primary": "se puede trasladar una heladera acostada",
+    "primary_volume": 260,
+    "secondary": [
+      "cuanto tiempo hay q esperar para enchufar una heladera",
+      "se puede transportar una heladera acostada",
+      "cuanto tiempo hay q esperar para enchufar una heladera nueva",
+      "cuanto hay q esperar para enchufar una heladera nueva",
+      "una heladera se puede transportar acostada",
+      "cuantas horas hay que esperar para enchufar una heladera nueva",
+      "cuanto esperar para enchufar una heladera",
+      "cuanto tiempo tengo que esperar para enchufar una heladera nueva"
+    ],
+    "total_volume": 1880,
+    "used": false
+  },
+  {
     "slug": "desinstalar-aire",
     "title": "Cómo desinstalar un aire acondicionado",
     "requires_data": [],
@@ -89,6 +109,6 @@
       "tips para mudanza"
     ],
     "total_volume": 140,
-    "used": false
+    "used": true
   }
 ]
