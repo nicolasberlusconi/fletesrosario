@@ -22,7 +22,7 @@ EXCLUDE = [r"\ben ingles\b", r"\bcomo ser\b", r"\bconvertirse en\b", r"\btrabajo
            r"\bempleo\b", r"\bsueldo\b", r"\bsignificado\b", r"\bsinonimo\b"]
 INFO = re.compile(r"\b(como|que|cuanto|cuantas|cual|checklist|lista|consejos|tips|guia|pasos|organizar|"
                   r"desinstalar|desinstala|trasladar|transportar|desarmar|mudarse|requisitos|tramite|cambio de domicilio|"
-                  r"embalar|empacar|preparar|ideas|antes de|despues de|cuando|donde|requisitos|"
+                  r"embalar|empacar|preparar|ideas|antes de|despues de|cuando|donde|requisitos|mudanza con|mudarse con|"
                   r"precio|precios|costo|cuesta|sale|presupuesto)\b")
 
 # Temas: data/topics.json (editable). Cada keyword va al primer tema cuyo "pattern" matchea.

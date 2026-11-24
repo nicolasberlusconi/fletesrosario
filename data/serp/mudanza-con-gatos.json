@@ -1,0 +1,28 @@
+{
+  "keyword": "mudanza con gatos",
+  "fecha": "2026-11-24",
+  "fuente": "google.com.ar, gl=ar, hl=es-419 (navegador de la app); salteados Reddit, TikTok, videos y la visión de IA",
+  "serp_features": ["visión general creada por IA", "videos", "más preguntas", "imágenes", "también se buscó"],
+  "people_also_ask": ["¿Cuánto tarda en adaptarse un gato a una mudanza?", "¿Qué hacer con los gatos en una mudanza?", "¿Qué es la regla 3-3-3 de los gatos?", "¿Cómo afecta una mudanza a un gato?"],
+  "top3": [
+    {"pos": 1, "url": "https://www.hillspet.es/cat-care/routine-care/moving-with-cats", "pais": "ES", "palabras": 1100, "imagenes": 5, "faq": false,
+     "h2": ["Para tu gato, su hogar es su castillo", "La seguridad olfativa es esencial", "Las mudanzas son estresantes para los gatos", "¿Cómo puedes hacer que la mudanza sea menos traumática para tu gato?"],
+     "nota": "Español de España, cero fuentes citadas, '3 semanas' sin origen; promo de alimento al final."},
+    {"pos": 2, "url": "https://espaciogatos.com.ar/mudanza-con-gatos-tips-seguridad/", "pais": "AR", "palabras": 1700, "imagenes": 3, "faq": true,
+     "h2": ["Qué hacer antes de la mudanza", "El día de la mudanza", "Primeras 24/72 horas", "Errores frecuentes", "Cuándo una estadía temporal puede ayudar", "Preguntas frecuentes"],
+     "nota": "El más completo; escrito por veterinaria que vende hotel para gatos (conflicto de interés). 'Varias semanas' sin número."},
+    {"pos": 3, "url": "https://www.royalcanin.com/ar/cats/kitten/moving-house-with-a-cat", "pais": "AR", "palabras": 1000, "imagenes": 3, "faq": false,
+     "h2": ["Mudarte con tu gato a un nuevo hogar", "Instalar a tu gato en su nuevo hogar", "¿Tenés un gato que sale a la calle?"],
+     "nota": "Sin fecha ni fuentes; '2 o 3 semanas' sin origen; menciona actualizar la chapita, no el microchip."}
+  ],
+  "lo_que_cubren_todos": ["transportadora con tiempo", "habitación segura el día de la mudanza", "una habitación primero en la casa nueva", "olores conocidos", "no dejarlo salir enseguida"],
+  "lo_que_falta_y_vamos_a_agregar": [
+    "Visto desde el equipo de mudanza: puerta del depto abierta horas, palier, ascensor, cajas que se cierran con el gato adentro",
+    "Balcón abierto durante el izamiento de muebles (contexto Rosario, deptos con balcón)",
+    "Por qué el gato no viaja en la caja del camión ni en el baúl (International Cat Care) + guiño real de la serpiente",
+    "Cifras con fuente: 2-3 semanas adentro, 4-5 h sin comida antes del viaje, difusor horas antes (International Cat Care, consultado 24/11/2026)",
+    "Recurso local: Hospital Municipal de Salud Animal de Rosario (Francia 1940, horario, castración y antirrábica gratis) según rosario.gob.ar",
+    "Señales de estrés que conviene mirar en los primeros días, con fuente"
+  ],
+  "objetivo": {"palabras_min": 1400, "imagenes": "3", "faqs": "6"}
+}

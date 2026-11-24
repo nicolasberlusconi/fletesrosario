@@ -37,7 +37,7 @@
       "cuanto tiempo tengo que esperar para enchufar una heladera nueva"
     ],
     "total_volume": 1880,
-    "used": false
+    "used": true
   },
   {
     "slug": "desinstalar-aire",
@@ -88,6 +88,7 @@
     "primary_volume": 20,
     "secondary": [
       "cajas para embalar mudanza",
+      "mudanza con embalaje",
       "como embalar muebles para mudanza",
       "como embalar una heladera para mudanza",
       "como embalar copas para mudanza",
@@ -95,7 +96,7 @@
       "como embalar sillas para mudanza",
       "como embalar vajilla para mudanza"
     ],
-    "total_volume": 210,
+    "total_volume": 240,
     "used": true
   },
   {
@@ -110,5 +111,38 @@
     ],
     "total_volume": 140,
     "used": true
+  },
+  {
+    "slug": "mudanza-mascotas",
+    "title": "Mudarse con gatos y perros",
+    "requires_data": [],
+    "notes": "Consejos de manejo solo con fuente veterinaria o de organismo (ej. SENASA para viajes, colegios veterinarios). Nada de medicación sin indicar que la receta el veterinario. Contexto Rosario: el día de la mudanza los animales lejos de la puerta abierta.",
+    "primary": "mudanza con gatos",
+    "primary_volume": 40,
+    "secondary": [],
+    "total_volume": 40,
+    "used": false
+  },
+  {
+    "slug": "muebles-pesados",
+    "title": "Cómo mover muebles pesados sin lastimarte",
+    "requires_data": [],
+    "notes": "Técnicas de levantamiento solo con fuente de organismo de seguridad laboral (SRT argentina.gob.ar, INSST, OSHA/NIOSH). No prometer que no te vas a lastimar. Cerrar con cuándo conviene que lo haga un equipo (escaleras, ascensor chico, izamiento).",
+    "primary": "como mover muebles pesados",
+    "primary_volume": 20,
+    "secondary": [],
+    "total_volume": 20,
+    "used": false
+  },
+  {
+    "slug": "desarmar-placard",
+    "title": "Cómo desarmar un placard o ropero para la mudanza",
+    "requires_data": [],
+    "notes": "Servicio que Mario ofrece (desarme/armado). Herrajes y pasos con fuente de fabricante de herrajes o del mueble cuando se cite algo técnico. Sin precios.",
+    "primary": "como desarmar un placard de melamina",
+    "primary_volume": 20,
+    "secondary": [],
+    "total_volume": 20,
+    "used": false
   }
 ]

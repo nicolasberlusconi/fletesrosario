@@ -55,5 +55,21 @@
     "prefer": "^mudanza con gatos$",
     "requires_data": [],
     "notes": "Consejos de manejo solo con fuente veterinaria o de organismo (ej. SENASA para viajes, colegios veterinarios). Nada de medicación sin indicar que la receta el veterinario. Contexto Rosario: el día de la mudanza los animales lejos de la puerta abierta."
+  },
+  {
+    "slug": "muebles-pesados",
+    "title": "Cómo mover muebles pesados sin lastimarte",
+    "pattern": "mueble.*pesado|muebles pesados|(armario|ropero|sofa).*pesado|levantar un mueble",
+    "prefer": "^como mover muebles pesados$",
+    "requires_data": [],
+    "notes": "Técnicas de levantamiento solo con fuente de organismo de seguridad laboral (SRT argentina.gob.ar, INSST, OSHA/NIOSH). No prometer que no te vas a lastimar. Cerrar con cuándo conviene que lo haga un equipo (escaleras, ascensor chico, izamiento)."
+  },
+  {
+    "slug": "desarmar-placard",
+    "title": "Cómo desarmar un placard o ropero para la mudanza",
+    "pattern": "placard|desarmar (un )?ropero",
+    "prefer": "^como desarmar un placard de melamina$",
+    "requires_data": [],
+    "notes": "Servicio que Mario ofrece (desarme/armado). Herrajes y pasos con fuente de fabricante de herrajes o del mueble cuando se cite algo técnico. Sin precios."
   }
 ]
